@@ -1,0 +1,17 @@
+# trtllm-serve settings for Qwen3-8B BF16 (passed with --config; --max_seq_len 4096 is on the command line).
+# Set here: what has to match the vLLM BF16 server (results/speed/vllm_bf16). Everything else stays at TRT-LLM 1.4.0rc2 defaults:
+# max_num_tokens 8192 and no chunked prefill (vLLM: 2048 tokens per step, chunked prefill), max_batch_size 2048
+# (vLLM: 256 seqs). Chunked prefill stays off because with FP8 KV it needs the paged context FMHA kernel that
+# SM89 lacks for NVFP4; all three precisions use the same scheduler.
+kv_cache_config:
+  # Same KV memory as vLLM in speed/vllm_bf16 (20,608 tokens = 2.83 GiB). KV cache manager v2 sizes the pool as
+  # max_tokens / max_util_for_resume (0.95) and admits new requests only below 95%, so 20,608 * 0.95.
+  max_tokens: 19578
+  enable_block_reuse: false  # = vLLM --no-enable-prefix-caching
+  # No host-memory KV tier: preempted requests are recomputed, as in vLLM V1. The default tier (same size
+  # as the GPU pool) would let TRT-LLM park preempted requests in host memory instead.
+  host_cache_size: 0
+cuda_graph_config:
+  # Pad decode batches up to the next captured size (1, 2, 4, 8, 16, 24, ..., 128), like vLLM does.
+  # Without it, decode batches 33-63 run eager (TRT-LLM warns about this at startup).
+  enable_padding: true

@@ -1,0 +1,454 @@
+{
+ "c1_in128": {
+  "input": 128,
+  "output": 64,
+  "prompts": 4,
+  "concurrency": 1,
+  "client_tpot_ms": 17.12087109418852,
+  "client_ttft_ms": 36.410046741366386,
+  "decode": {
+   "wall_ms": 17.136643,
+   "kernel_ms": 17.0195905,
+   "parts": {
+    "linear": 16.213756,
+    "attention": 0.530562,
+    "norm": 0.130989,
+    "sampling": 0.064334,
+    "other": 0.040318,
+    "activation": 0.038656
+   },
+   "kernels": [
+    {
+     "name": "internal::gemvx::kernel",
+     "part": "linear",
+     "runs": 108.0,
+     "ms": 13.542683
+    },
+    {
+     "name": "internal::gemvx::kernel",
+     "part": "linear",
+     "runs": 37.0,
+     "ms": 2.6708805
+    },
+    {
+     "name": "kernel_mha",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 0.3902935
+    },
+    {
+     "name": "kernel_cutlass_kernel_flashinfernormkernelsfused_add_rmsnormFusedAddRM",
+     "part": "norm",
+     "runs": 72.0,
+     "ms": 0.129215
+    },
+    {
+     "name": "tensorrt_llm::_v1::kernels::applyBiasRopeUpdateKVCacheV2",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 0.0683825
+    },
+    {
+     "name": "tensorrt_llm::_v1::kernels::fusedQKNormRopeKernel",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 0.0683655
+    },
+    {
+     "name": "tensorrt_llm::_v1::kernels::fusedSampling::fusedSamplingKernel",
+     "part": "sampling",
+     "runs": 1.0,
+     "ms": 0.064334
+    },
+    {
+     "name": "silu_and_mul_kernel",
+     "part": "activation",
+     "runs": 36.0,
+     "ms": 0.038656
+    },
+    {
+     "name": "at::native::reduce_kernel",
+     "part": "other",
+     "runs": 1.0,
+     "ms": 0.004128
+    },
+    {
+     "name": "tensorrt_llm::batch_manager::kv_cache_manager_v2::copyBatchBlockOffset",
+     "part": "attention",
+     "runs": 1.0,
+     "ms": 0.003424
+    },
+    {
+     "name": "at::native::unrolled_elementwise_kernel",
+     "part": "other",
+     "runs": 2.0,
+     "ms": 0.002464
+    },
+    {
+     "name": "at::native::index_elementwise_kernel",
+     "part": "other",
+     "runs": 1.0,
+     "ms": 0.002464
+    }
+   ]
+  },
+  "prefill": {
+   "wall_ms": 35.8377155,
+   "kernel_ms": 21.9859265,
+   "parts": {
+    "linear": 20.888153,
+    "attention": 0.568399,
+    "norm": 0.2612405,
+    "other": 0.1355465,
+    "activation": 0.133646
+   },
+   "kernels": [
+    {
+     "name": "ampere_bf16_s1688gemm_bf16_128x64_sliced1x2_ldg8_f2f_tn",
+     "part": "linear",
+     "runs": 36.0,
+     "ms": 9.9226525
+    },
+    {
+     "name": "ampere_bf16_s1688gemm_bf16_64x128_sliced1x2_ldg8_f2f_tn",
+     "part": "linear",
+     "runs": 36.0,
+     "ms": 5.323548
+    },
+    {
+     "name": "ampere_bf16_s1688gemm_bf16_64x64_sliced1x4_ldg8_f2f_tn",
+     "part": "linear",
+     "runs": 36.0,
+     "ms": 2.7863075
+    },
+    {
+     "name": "ampere_bf16_s16816gemm_bf16_64x64_sliced1x2_ldg8_f2f_stages_64x5_tn",
+     "part": "linear",
+     "runs": 36.0,
+     "ms": 1.553931
+    },
+    {
+     "name": "internal::gemvx::kernel",
+     "part": "linear",
+     "runs": 1.0,
+     "ms": 1.303281
+    },
+    {
+     "name": "fmha_v2_flash_attention_bf16_64_32_S_qkv_128_causal_sm89_kernel_nl",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 0.3409535
+    },
+    {
+     "name": "kernel_cutlass_kernel_flashinfernormkernelsfused_add_rmsnormFusedAddRM",
+     "part": "norm",
+     "runs": 72.0,
+     "ms": 0.2590005
+    },
+    {
+     "name": "silu_and_mul_kernel",
+     "part": "activation",
+     "runs": 36.0,
+     "ms": 0.133646
+    },
+    {
+     "name": "tensorrt_llm::_v1::kernels::applyBiasRopeUpdateKVCacheV2",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 0.114874
+    },
+    {
+     "name": "tensorrt_llm::_v1::kernels::fusedQKNormRopeKernel",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 0.1091305
+    },
+    {
+     "name": "tensorrt_llm::_v1::kernels::computeSeqAndPaddingOffsets",
+     "part": "other",
+     "runs": 36.0,
+     "ms": 0.078684
+    },
+    {
+     "name": "at::native::index_elementwise_kernel",
+     "part": "other",
+     "runs": 4.0,
+     "ms": 0.006144
+    }
+   ]
+  }
+ },
+ "c1_in2048": {
+  "input": 2048,
+  "output": 64,
+  "prompts": 2,
+  "concurrency": 1,
+  "client_tpot_ms": 17.396713581143157,
+  "client_ttft_ms": 221.4616290293634,
+  "decode": {
+   "wall_ms": 17.414133,
+   "kernel_ms": 17.2930155,
+   "parts": {
+    "linear": 16.215138,
+    "attention": 0.7942055,
+    "norm": 0.135164,
+    "sampling": 0.0666545,
+    "other": 0.043903,
+    "activation": 0.038623
+   },
+   "kernels": [
+    {
+     "name": "internal::gemvx::kernel",
+     "part": "linear",
+     "runs": 108.0,
+     "ms": 13.540155
+    },
+    {
+     "name": "internal::gemvx::kernel",
+     "part": "linear",
+     "runs": 37.0,
+     "ms": 2.674549
+    },
+    {
+     "name": "kernel_mha",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 0.6295545
+    },
+    {
+     "name": "kernel_cutlass_kernel_flashinfernormkernelsfused_add_rmsnormFusedAddRM",
+     "part": "norm",
+     "runs": 72.0,
+     "ms": 0.1332765
+    },
+    {
+     "name": "tensorrt_llm::_v1::kernels::applyBiasRopeUpdateKVCacheV2",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 0.0895325
+    },
+    {
+     "name": "tensorrt_llm::_v1::kernels::fusedQKNormRopeKernel",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 0.071807
+    },
+    {
+     "name": "tensorrt_llm::_v1::kernels::fusedSampling::fusedSamplingKernel",
+     "part": "sampling",
+     "runs": 1.0,
+     "ms": 0.0666545
+    },
+    {
+     "name": "silu_and_mul_kernel",
+     "part": "activation",
+     "runs": 36.0,
+     "ms": 0.038623
+    },
+    {
+     "name": "at::native::reduce_kernel",
+     "part": "other",
+     "runs": 1.0,
+     "ms": 0.0043035
+    },
+    {
+     "name": "tensorrt_llm::batch_manager::kv_cache_manager_v2::copyBatchBlockOffset",
+     "part": "attention",
+     "runs": 1.0,
+     "ms": 0.003456
+    },
+    {
+     "name": "at::native::unrolled_elementwise_kernel",
+     "part": "other",
+     "runs": 2.0,
+     "ms": 0.00288
+    },
+    {
+     "name": "at::native::index_elementwise_kernel",
+     "part": "other",
+     "runs": 1.0,
+     "ms": 0.002656
+    }
+   ]
+  },
+  "prefill": {
+   "wall_ms": 216.0641995,
+   "kernel_ms": 201.9362615,
+   "parts": {
+    "linear": 180.0008815,
+    "attention": 13.979905,
+    "activation": 5.0930195,
+    "norm": 2.672122,
+    "other": 0.1903335
+   },
+   "kernels": [
+    {
+     "name": "ampere_bf16_s1688gemm_bf16_64x128_sliced1x2_ldg8_f2f_tn",
+     "part": "linear",
+     "runs": 72.0,
+     "ms": 116.03805
+    },
+    {
+     "name": "ampere_bf16_s1688gemm_bf16_128x64_sliced1x2_ldg8_f2f_tn",
+     "part": "linear",
+     "runs": 72.0,
+     "ms": 62.6606695
+    },
+    {
+     "name": "fmha_v2_flash_attention_bf16_64_32_S_qkv_128_causal_sm89_kernel_nl",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 12.0415365
+    },
+    {
+     "name": "silu_and_mul_kernel",
+     "part": "activation",
+     "runs": 36.0,
+     "ms": 5.0930195
+    },
+    {
+     "name": "kernel_cutlass_kernel_flashinfernormkernelsfused_add_rmsnormFusedAddRM",
+     "part": "norm",
+     "runs": 72.0,
+     "ms": 2.660154
+    },
+    {
+     "name": "internal::gemvx::kernel",
+     "part": "linear",
+     "runs": 1.0,
+     "ms": 1.302162
+    },
+    {
+     "name": "tensorrt_llm::_v1::kernels::fusedQKNormRopeKernel",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 1.10618
+    },
+    {
+     "name": "tensorrt_llm::_v1::kernels::applyBiasRopeUpdateKVCacheV2",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 0.8284445
+    },
+    {
+     "name": "tensorrt_llm::_v1::kernels::computeSeqAndPaddingOffsets",
+     "part": "other",
+     "runs": 36.0,
+     "ms": 0.099151
+    },
+    {
+     "name": "at::native::vectorized_gather_kernel",
+     "part": "other",
+     "runs": 1.0,
+     "ms": 0.0207995
+    },
+    {
+     "name": "at::native::elementwise_kernel",
+     "part": "other",
+     "runs": 1.0,
+     "ms": 0.0151195
+    },
+    {
+     "name": "kernel_cutlass_kernel_flashinfernormkernelsrmsnormRMSNormKernel_object",
+     "part": "norm",
+     "runs": 1.0,
+     "ms": 0.011968
+    }
+   ]
+  }
+ },
+ "c4_in128": {
+  "input": 128,
+  "output": 64,
+  "prompts": 8,
+  "concurrency": 4,
+  "client_tpot_ms": 18.18308543177351,
+  "client_ttft_ms": 75.09336294606328,
+  "decode": {
+   "wall_ms": 18.183065,
+   "kernel_ms": 18.0828905,
+   "parts": {
+    "linear": 17.020275,
+    "attention": 0.7250565,
+    "norm": 0.174348,
+    "sampling": 0.0690545,
+    "activation": 0.048815,
+    "other": 0.046528
+   },
+   "kernels": [
+    {
+     "name": "cutlass::Kernel2",
+     "part": "linear",
+     "runs": 145.0,
+     "ms": 17.020275
+    },
+    {
+     "name": "kernel_mha",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 0.555763
+    },
+    {
+     "name": "kernel_cutlass_kernel_flashinfernormkernelsfused_add_rmsnormFusedAddRM",
+     "part": "norm",
+     "runs": 72.0,
+     "ms": 0.1721885
+    },
+    {
+     "name": "tensorrt_llm::_v1::kernels::applyBiasRopeUpdateKVCacheV2",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 0.092606
+    },
+    {
+     "name": "tensorrt_llm::_v1::kernels::fusedQKNormRopeKernel",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 0.073151
+    },
+    {
+     "name": "tensorrt_llm::_v1::kernels::fusedSampling::fusedSamplingKernel",
+     "part": "sampling",
+     "runs": 1.0,
+     "ms": 0.0690545
+    },
+    {
+     "name": "silu_and_mul_kernel",
+     "part": "activation",
+     "runs": 36.0,
+     "ms": 0.048815
+    },
+    {
+     "name": "at::native::reduce_kernel",
+     "part": "other",
+     "runs": 1.0,
+     "ms": 0.00432
+    },
+    {
+     "name": "at::native::unrolled_elementwise_kernel",
+     "part": "other",
+     "runs": 1.0,
+     "ms": 0.003648
+    },
+    {
+     "name": "tensorrt_llm::batch_manager::kv_cache_manager_v2::copyBatchBlockOffset",
+     "part": "attention",
+     "runs": 1.0,
+     "ms": 0.003616
+    },
+    {
+     "name": "at::native::unrolled_elementwise_kernel",
+     "part": "other",
+     "runs": 2.0,
+     "ms": 0.002848
+    },
+    {
+     "name": "at::native::indexSelectSmallIndex",
+     "part": "other",
+     "runs": 1.0,
+     "ms": 0.002768
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,11 @@
+# trtllm-serve settings for nvidia/Qwen3-8B-FP8 (ModelOpt FP8 W8A8 per-tensor, FP8 KV with k/v scales).
+# Same as trtllm_bf16.yaml except the KV size and the explicit KV dtype; see that file for the reasons.
+kv_cache_config:
+  # vLLM FP8 (--kv-cache-dtype fp8) gets 126,256 tokens = 8.67 GiB; times max_util_for_resume (0.95).
+  max_tokens: 119943
+  # The checkpoint already asks for FP8 KV ('auto' would follow it); explicit so a later release can't change it.
+  dtype: fp8
+  enable_block_reuse: false
+  host_cache_size: 0
+cuda_graph_config:
+  enable_padding: true

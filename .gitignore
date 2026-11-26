@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+# Nsight Systems traces: large, and profile.sh regenerates them (the breakdowns made from them are kept).
+results/**/*.nsys-rep
+results/**/*.sqlite

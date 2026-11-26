@@ -1,0 +1,557 @@
+{
+ "c1_in3900": {
+  "input": 3900,
+  "output": 64,
+  "prompts": 2,
+  "concurrency": 1,
+  "client_tpot_ms": 12.12186070661696,
+  "client_ttft_ms": 232.3794448748231,
+  "decode": {
+   "wall_ms": 12.00997,
+   "kernel_ms": 11.7750895,
+   "parts": {
+    "linear": 8.8509,
+    "attention": 2.507578,
+    "other": 0.165409,
+    "norm": 0.1360325,
+    "sampling": 0.066288,
+    "activation": 0.049824
+   },
+   "kernels": [
+    {
+     "name": "tensorrt_llm::_v1::kernels::cuda_core_gemm::cudaCoreGemmV2",
+     "part": "linear",
+     "runs": 144.0,
+     "ms": 7.551502
+    },
+    {
+     "name": "tensorrt_llm::_v1::kernels::mmha::masked_multihead_attention_kernel",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 2.429129
+    },
+    {
+     "name": "internal::gemvx::kernel",
+     "part": "linear",
+     "runs": 1.0,
+     "ms": 1.298917
+    },
+    {
+     "name": "kernel_cutlass_kernel_flashinfernormkernelsfused_add_rmsnormFusedAddRM",
+     "part": "norm",
+     "runs": 72.0,
+     "ms": 0.134208
+    },
+    {
+     "name": "tensorrt_llm::_v1::common::scaleMatrixPerTensorVec",
+     "part": "other",
+     "runs": 72.0,
+     "ms": 0.1213775
+    },
+    {
+     "name": "tensorrt_llm::_v1::kernels::fusedQKNormRopeKernel",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 0.075249
+    },
+    {
+     "name": "tensorrt_llm::_v1::kernels::fusedSampling::fusedSamplingKernel",
+     "part": "sampling",
+     "runs": 1.0,
+     "ms": 0.066288
+    },
+    {
+     "name": "silu_and_mul_kernel",
+     "part": "activation",
+     "runs": 36.0,
+     "ms": 0.049824
+    },
+    {
+     "name": "at::native::reduce_kernel",
+     "part": "other",
+     "runs": 1.0,
+     "ms": 0.004384
+    },
+    {
+     "name": "tensorrt_llm::batch_manager::kv_cache_manager_v2::copyBatchBlockOffset",
+     "part": "attention",
+     "runs": 1.0,
+     "ms": 0.0034245
+    },
+    {
+     "name": "at::native::unrolled_elementwise_kernel",
+     "part": "other",
+     "runs": 2.0,
+     "ms": 0.002848
+    },
+    {
+     "name": "at::native::index_elementwise_kernel",
+     "part": "other",
+     "runs": 1.0,
+     "ms": 0.002688
+    }
+   ]
+  },
+  "prefill": {
+   "wall_ms": 225.320269,
+   "kernel_ms": 216.6107275,
+   "parts": {
+    "linear": 174.1167925,
+    "attention": 23.736803,
+    "activation": 10.7579485,
+    "norm": 6.5469705,
+    "other": 1.452213
+   },
+   "kernels": [
+    {
+     "name": "sm89_xmma_gemm_e4m3bf16_e4m3f32_f32_tn_n_tilesize128x64x64_stage4_warp",
+     "part": "linear",
+     "runs": 36.0,
+     "ms": 89.049764
+    },
+    {
+     "name": "sm89_xmma_gemm_e4m3bf16_e4m3f32_f32_tn_n_tilesize128x128x64_stage3_war",
+     "part": "linear",
+     "runs": 36.0,
+     "ms": 45.5326225
+    },
+    {
+     "name": "sm89_xmma_gemm_e4m3bf16_e4m3f32_f32_tn_n_tilesize64x128x64_stage4_warp",
+     "part": "linear",
+     "runs": 72.0,
+     "ms": 38.209601
+    },
+    {
+     "name": "fmha_v2_flash_attention_e4m3_fp32_64_32_S_qkv_128_causal_sm89_kernel_n",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 20.080211
+    },
+    {
+     "name": "silu_and_mul_kernel",
+     "part": "activation",
+     "runs": 36.0,
+     "ms": 10.7579485
+    },
+    {
+     "name": "kernel_cutlass_kernel_flashinfernormkernelsfused_add_rmsnormFusedAddRM",
+     "part": "norm",
+     "runs": 72.0,
+     "ms": 6.5240265
+    },
+    {
+     "name": "tensorrt_llm::_v1::kernels::fusedQKNormRopeKernel",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 2.0691925
+    },
+    {
+     "name": "tensorrt_llm::_v1::kernels::applyBiasRopeUpdateKVCacheV2",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 1.5836555
+    },
+    {
+     "name": "internal::gemvx::kernel",
+     "part": "linear",
+     "runs": 1.0,
+     "ms": 1.324805
+    },
+    {
+     "name": "tensorrt_llm::_v1::common::scaleMatrixPerTensorVec",
+     "part": "other",
+     "runs": 72.0,
+     "ms": 1.1965005
+    },
+    {
+     "name": "tensorrt_llm::_v1::kernels::computeSeqAndPaddingOffsets",
+     "part": "other",
+     "runs": 36.0,
+     "ms": 0.1259205
+    },
+    {
+     "name": "at::native::vectorized_gather_kernel",
+     "part": "other",
+     "runs": 1.0,
+     "ms": 0.047168
+    }
+   ]
+  }
+ },
+ "c2_in128": {
+  "input": 128,
+  "output": 64,
+  "prompts": 4,
+  "concurrency": 2,
+  "client_tpot_ms": 13.500606667043435,
+  "client_ttft_ms": 58.26863553375006,
+  "decode": {
+   "wall_ms": 13.494715,
+   "kernel_ms": 13.245066,
+   "parts": {
+    "linear": 8.916263,
+    "attention": 3.870881,
+    "norm": 0.172864,
+    "other": 0.163872,
+    "sampling": 0.068832,
+    "activation": 0.0503365
+   },
+   "kernels": [
+    {
+     "name": "tensorrt_llm::_v1::kernels::cuda_core_gemm::cudaCoreGemmV2",
+     "part": "linear",
+     "runs": 144.0,
+     "ms": 7.6090095
+    },
+    {
+     "name": "tensorrt_llm::_v1::kernels::mmha::masked_multihead_attention_kernel",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 3.792897
+    },
+    {
+     "name": "cutlass::Kernel2",
+     "part": "linear",
+     "runs": 1.0,
+     "ms": 1.306246
+    },
+    {
+     "name": "kernel_cutlass_kernel_flashinfernormkernelsfused_add_rmsnormFusedAddRM",
+     "part": "norm",
+     "runs": 72.0,
+     "ms": 0.17072
+    },
+    {
+     "name": "tensorrt_llm::_v1::common::scaleMatrixPerTensorVec",
+     "part": "other",
+     "runs": 72.0,
+     "ms": 0.118833
+    },
+    {
+     "name": "tensorrt_llm::_v1::kernels::fusedQKNormRopeKernel",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 0.074112
+    },
+    {
+     "name": "tensorrt_llm::_v1::kernels::fusedSampling::fusedSamplingKernel",
+     "part": "sampling",
+     "runs": 1.0,
+     "ms": 0.068832
+    },
+    {
+     "name": "silu_and_mul_kernel",
+     "part": "activation",
+     "runs": 36.0,
+     "ms": 0.0503365
+    },
+    {
+     "name": "at::native::reduce_kernel",
+     "part": "other",
+     "runs": 1.0,
+     "ms": 0.004384
+    },
+    {
+     "name": "tensorrt_llm::batch_manager::kv_cache_manager_v2::copyBatchBlockOffset",
+     "part": "attention",
+     "runs": 1.0,
+     "ms": 0.003616
+    },
+    {
+     "name": "at::native::unrolled_elementwise_kernel",
+     "part": "other",
+     "runs": 1.0,
+     "ms": 0.00288
+    },
+    {
+     "name": "at::native::unrolled_elementwise_kernel",
+     "part": "other",
+     "runs": 2.0,
+     "ms": 0.00288
+    }
+   ]
+  }
+ },
+ "c4_in2048": {
+  "input": 2048,
+  "output": 64,
+  "prompts": 8,
+  "concurrency": 4,
+  "client_tpot_ms": 11.193645216288074,
+  "client_ttft_ms": 448.00957501865923,
+  "decode": {
+   "wall_ms": 11.119891,
+   "kernel_ms": 10.8611045,
+   "parts": {
+    "linear": 9.012951,
+    "attention": 1.391094,
+    "norm": 0.1728805,
+    "other": 0.166066,
+    "sampling": 0.068192,
+    "activation": 0.051328
+   },
+   "kernels": [
+    {
+     "name": "tensorrt_llm::_v1::kernels::cuda_core_gemm::cudaCoreGemmV2",
+     "part": "linear",
+     "runs": 144.0,
+     "ms": 7.6976355
+    },
+    {
+     "name": "cutlass::Kernel2",
+     "part": "linear",
+     "runs": 1.0,
+     "ms": 1.314726
+    },
+    {
+     "name": "kernel_mha",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 1.2149655
+    },
+    {
+     "name": "kernel_cutlass_kernel_flashinfernormkernelsfused_add_rmsnormFusedAddRM",
+     "part": "norm",
+     "runs": 72.0,
+     "ms": 0.1707685
+    },
+    {
+     "name": "tensorrt_llm::_v1::common::scaleMatrixPerTensorVec",
+     "part": "other",
+     "runs": 72.0,
+     "ms": 0.11912
+    },
+    {
+     "name": "tensorrt_llm::_v1::kernels::applyBiasRopeUpdateKVCacheV2",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 0.0985295
+    },
+    {
+     "name": "tensorrt_llm::_v1::kernels::fusedQKNormRopeKernel",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 0.073984
+    },
+    {
+     "name": "tensorrt_llm::_v1::kernels::fusedSampling::fusedSamplingKernel",
+     "part": "sampling",
+     "runs": 1.0,
+     "ms": 0.068192
+    },
+    {
+     "name": "silu_and_mul_kernel",
+     "part": "activation",
+     "runs": 36.0,
+     "ms": 0.051328
+    },
+    {
+     "name": "at::native::reduce_kernel",
+     "part": "other",
+     "runs": 1.0,
+     "ms": 0.004384
+    },
+    {
+     "name": "at::native::unrolled_elementwise_kernel",
+     "part": "other",
+     "runs": 1.0,
+     "ms": 0.00368
+    },
+    {
+     "name": "tensorrt_llm::batch_manager::kv_cache_manager_v2::copyBatchBlockOffset",
+     "part": "attention",
+     "runs": 1.0,
+     "ms": 0.003584
+    }
+   ]
+  }
+ },
+ "c16_in128": {
+  "input": 128,
+  "output": 64,
+  "prompts": 32,
+  "concurrency": 16,
+  "client_tpot_ms": 11.158479388714545,
+  "client_ttft_ms": 136.10176253132522,
+  "decode": {
+   "wall_ms": 11.038389,
+   "kernel_ms": 10.744883,
+   "parts": {
+    "linear": 9.5167135,
+    "attention": 0.743125,
+    "norm": 0.1711685,
+    "other": 0.1519375,
+    "sampling": 0.098784,
+    "activation": 0.052256
+   },
+   "kernels": [
+    {
+     "name": "sm89_xmma_gemm_e4m3bf16_e4m3f32_f32_tn_n_tilesize32x64x64_stage5_warps",
+     "part": "linear",
+     "runs": 144.0,
+     "ms": 8.181894
+    },
+    {
+     "name": "cutlass::Kernel2",
+     "part": "linear",
+     "runs": 1.0,
+     "ms": 1.3348225
+    },
+    {
+     "name": "kernel_mha",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 0.5623695
+    },
+    {
+     "name": "kernel_cutlass_kernel_flashinfernormkernelsfused_add_rmsnormFusedAddRM",
+     "part": "norm",
+     "runs": 72.0,
+     "ms": 0.1690565
+    },
+    {
+     "name": "tensorrt_llm::_v1::kernels::applyBiasRopeUpdateKVCacheV2",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 0.100305
+    },
+    {
+     "name": "tensorrt_llm::_v1::kernels::fusedSampling::fusedSamplingKernel",
+     "part": "sampling",
+     "runs": 1.0,
+     "ms": 0.098784
+    },
+    {
+     "name": "tensorrt_llm::_v1::common::scaleMatrixPerTensorVec",
+     "part": "other",
+     "runs": 72.0,
+     "ms": 0.086545
+    },
+    {
+     "name": "tensorrt_llm::_v1::kernels::fusedQKNormRopeKernel",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 0.07568
+    },
+    {
+     "name": "silu_and_mul_kernel",
+     "part": "activation",
+     "runs": 36.0,
+     "ms": 0.052256
+    },
+    {
+     "name": "at::native::unrolled_elementwise_kernel",
+     "part": "other",
+     "runs": 1.0,
+     "ms": 0.008736
+    },
+    {
+     "name": "at::native::indexSelectSmallIndex",
+     "part": "other",
+     "runs": 1.0,
+     "ms": 0.007104
+    },
+    {
+     "name": "at::native::indexSelectSmallIndex",
+     "part": "other",
+     "runs": 1.0,
+     "ms": 0.0059365
+    }
+   ]
+  }
+ },
+ "c64_in128": {
+  "input": 128,
+  "output": 64,
+  "prompts": 128,
+  "concurrency": 64,
+  "client_tpot_ms": 13.044419946030727,
+  "client_ttft_ms": 445.7817159127444,
+  "decode": {
+   "wall_ms": 12.726208,
+   "kernel_ms": 12.43091,
+   "parts": {
+    "linear": 10.0908815,
+    "attention": 1.7989705,
+    "norm": 0.1842895,
+    "other": 0.176609,
+    "sampling": 0.1024325,
+    "activation": 0.078593
+   },
+   "kernels": [
+    {
+     "name": "sm89_xmma_gemm_e4m3bf16_e4m3f32_f32_tn_n_tilesize64x64x64_stage4_warps",
+     "part": "linear",
+     "runs": 108.0,
+     "ms": 7.8638615
+    },
+    {
+     "name": "kernel_mha",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 1.595881
+    },
+    {
+     "name": "cutlass::Kernel2",
+     "part": "linear",
+     "runs": 1.0,
+     "ms": 1.4373515
+    },
+    {
+     "name": "sm89_xmma_gemm_e4m3bf16_e4m3f32_f32_tn_n_tilesize32x64x64_stage5_warps",
+     "part": "linear",
+     "runs": 36.0,
+     "ms": 0.7877795
+    },
+    {
+     "name": "kernel_cutlass_kernel_flashinfernormkernelsfused_add_rmsnormFusedAddRM",
+     "part": "norm",
+     "runs": 72.0,
+     "ms": 0.1820815
+    },
+    {
+     "name": "tensorrt_llm::_v1::kernels::applyBiasRopeUpdateKVCacheV2",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 0.107329
+    },
+    {
+     "name": "tensorrt_llm::_v1::kernels::fusedSampling::fusedSamplingKernel",
+     "part": "sampling",
+     "runs": 1.0,
+     "ms": 0.1024325
+    },
+    {
+     "name": "tensorrt_llm::_v1::common::scaleMatrixPerTensorVec",
+     "part": "other",
+     "runs": 72.0,
+     "ms": 0.0936485
+    },
+    {
+     "name": "tensorrt_llm::_v1::kernels::fusedQKNormRopeKernel",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 0.087712
+    },
+    {
+     "name": "silu_and_mul_kernel",
+     "part": "activation",
+     "runs": 36.0,
+     "ms": 0.078593
+    },
+    {
+     "name": "at::native::unrolled_elementwise_kernel",
+     "part": "other",
+     "runs": 1.0,
+     "ms": 0.030176
+    },
+    {
+     "name": "at::native::vectorized_elementwise_kernel",
+     "part": "other",
+     "runs": 1.0,
+     "ms": 0.010272
+    }
+   ]
+  }
+ }
+}

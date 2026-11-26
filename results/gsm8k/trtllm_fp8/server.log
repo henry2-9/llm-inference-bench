@@ -1,0 +1,1648 @@
+Skipping import of cpp extensions due to incompatible torch version 2.14.0a0+b2c75dd062.nv26.09 for torchao version 0.15.0             Please see https://github.com/pytorch/ao/issues/2919 for more info
+[TensorRT-LLM] TensorRT LLM version: 1.4.0rc2
+/usr/local/lib/python3.12/dist-packages/tensorrt_llm/serve/openai_protocol.py:288: UserWarning: Field name "schema" in "ResponseFormat" shadows an attribute in parent "OpenAIBaseModel"
+  class ResponseFormat(OpenAIBaseModel):
+[11/24/2026-06:00:13] [TRT-LLM] [I] [llmapi] Using LLM with PyTorch backend
+[11/24/2026-06:00:13] [TRT-LLM] [I] [llmapi] neither checkpoint_format nor checkpoint_loader were provided, checkpoint_format will be set to HF.
+[11/24/2026-06:00:13] [TRT-LLM] [I] [llmapi] Found /models/hub/models--nvidia--Qwen3-8B-FP8/snapshots/2cebc4c89e25abc17668c81b01dceaf3d8b914d5/hf_quant_config.json, pre-quantized checkpoint is used.
+[11/24/2026-06:00:13] [TRT-LLM] [I] [llmapi] Setting quant_algo=FP8 from HF quant config.
+[11/24/2026-06:00:13] [TRT-LLM] [I] [llmapi] Setting exclude_modules=['lm_head'] from HF quant config.
+`torch_dtype` is deprecated! Use `dtype` instead!
+[11/24/2026-06:00:14] [TRT-LLM] [W] [executor] Orchestrator is creating IPC executor
+[11/24/2026-06:00:14] [TRT-LLM] [I] [executor] [startup][pid=1] executor_proxy: start
+[11/24/2026-06:00:14] [TRT-LLM] [I] [_startup] [startup][pid=1] mpi_session_setup: start
+[11/24/2026-06:00:14] [TRT-LLM] [I] [_startup] [startup][pid=1] mpi_session_setup: done, total=0.000s, unattributed=0.000s | 
+[33;20mrank 0 using MpiPoolSession to spawn MPI processes
+[11/24/2026-06:00:14] [TRT-LLM] [I] [executor] Generating a new HMAC key for server proxy_request_queue
+[11/24/2026-06:00:14] [TRT-LLM] [I] [executor] Generating a new HMAC key for server proxy_result_queue
+[11/24/2026-06:00:14] [TRT-LLM] [I] [executor] Generating a new HMAC key for server worker_init_status_queue
+[11/24/2026-06:00:14] [TRT-LLM] [I] [executor] [startup][pid=1] executor_proxy/pre_worker_setup: done in 0.021s (includes mpi_session_setup)
+[11/24/2026-06:00:14] [TRT-LLM] [I] [_startup] [startup][pid=1] worker_submit_to_ready: start
+[11/24/2026-06:00:14] [TRT-LLM] [I] [_startup] [startup][pid=1] worker_submit_to_ready/worker_submit: start
+[11/24/2026-06:00:14] [TRT-LLM] [I] [_startup] [startup][pid=1] worker_submit_to_ready/worker_submit: done in 0.001s
+[11/24/2026-06:00:14] [TRT-LLM] [I] [_startup] [startup][pid=1] worker_submit_to_ready/worker_initialization_wait: start
+[0mSkipping import of cpp extensions due to incompatible torch version 2.14.0a0+b2c75dd062.nv26.09 for torchao version 0.15.0             Please see https://github.com/pytorch/ao/issues/2919 for more info
+[TensorRT-LLM] TensorRT LLM version: 1.4.0rc2
+/usr/local/lib/python3.12/dist-packages/tensorrt_llm/serve/openai_protocol.py:288: UserWarning: Field name "schema" in "ResponseFormat" shadows an attribute in parent "OpenAIBaseModel"
+  class ResponseFormat(OpenAIBaseModel):
+[TRT-LLM] [I] [runtime][RANK 0] Refreshed the MPI local session
+[11/24/2026-06:00:24] [TRT-LLM] [I] [executor] get signal from executor worker
+[11/24/2026-06:00:24] [TRT-LLM] [I] [llmapi] Worker process 81 CPU affinity set to [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19] for optimal NUMA-aware scheduling (51/51 threads).
+[11/24/2026-06:00:24] [TRT-LLM] [I] [_startup] [startup][pid=81] executor_creation: start
+`torch_dtype` is deprecated! Use `dtype` instead!
+[11/24/2026-06:00:24] [TRT-LLM] [I] [_torch] ATTENTION RUNTIME FEATURES:  AttentionRuntimeFeatures(chunked_prefill=False, cache_reuse=False, has_speculative_draft_tokens=False, chunk_size=8192, chunked_prefill_buffer_batch_size=4)
+[11/24/2026-06:00:24] [TRT-LLM] [I] [_startup] [startup][pid=81] executor_creation/configuration_and_distributed_init: done in 0.027s
+[11/24/2026-06:00:24] [TRT-LLM] [I] [_startup] [startup][pid=81] executor_creation/model: start
+[11/24/2026-06:00:25] [TRT-LLM] [I] [_torch] Validating KV Cache config against kv_cache_dtype="fp8"
+[11/24/2026-06:00:25] [TRT-LLM] [I] [_torch] Use 8.79 GB for model weights.
+[11/24/2026-06:00:25] [TRT-LLM] [I] [_torch] Checkpoint I/O policy is falling back before model materialization: requested=auto, selected=native, reason=rank 0: checkpoint bytes (9435808600) exceed available host memory (23449862144) after startup headroom (17179869184).
+[11/24/2026-06:00:25] [TRT-LLM] [I] [_torch] Prefetching 8.79GB checkpoint files.
+[11/24/2026-06:00:25] [TRT-LLM] [I] [_torch] Prefetching /models/hub/models--nvidia--Qwen3-8B-FP8/snapshots/2cebc4c89e25abc17668c81b01dceaf3d8b914d5/model-00001-of-00002.safetensors to memory...
+[11/24/2026-06:00:25] [TRT-LLM] [I] [_torch] Prefetching /models/hub/models--nvidia--Qwen3-8B-FP8/snapshots/2cebc4c89e25abc17668c81b01dceaf3d8b914d5/model-00002-of-00002.safetensors to memory...
+[11/24/2026-06:00:35] [TRT-LLM] [I] [_torch] Finished prefetching /models/hub/models--nvidia--Qwen3-8B-FP8/snapshots/2cebc4c89e25abc17668c81b01dceaf3d8b914d5/model-00002-of-00002.safetensors.
+[11/24/2026-06:00:41] [TRT-LLM] [I] [_torch] Finished prefetching /models/hub/models--nvidia--Qwen3-8B-FP8/snapshots/2cebc4c89e25abc17668c81b01dceaf3d8b914d5/model-00001-of-00002.safetensors.
+[11/24/2026-06:00:41] [TRT-LLM] [I] [_torch] Start to load safetensor file /models/hub/models--nvidia--Qwen3-8B-FP8/snapshots/2cebc4c89e25abc17668c81b01dceaf3d8b914d5/model-00001-of-00002.safetensors
+[11/24/2026-06:00:41] [TRT-LLM] [I] [_torch] Start to load safetensor file /models/hub/models--nvidia--Qwen3-8B-FP8/snapshots/2cebc4c89e25abc17668c81b01dceaf3d8b914d5/model-00002-of-00002.safetensors
+Loading safetensors weights in parallel:   0%|          | 0/2 [00:00<?, ?it/s]Loading safetensors weights in parallel: 100%|██████████| 2/2 [00:00<00:00, 180.38it/s]
+[11/24/2026-06:00:41] [TRT-LLM] [I] [_torch] Checkpoint I/O policy: requested=auto, selected=native, activated=False, effective=native, fallback_reason=rank 0: checkpoint bytes (9435808600) exceed available host memory (23449862144) after startup headroom (17179869184).
+Loading weights concurrently:   0%|          | 0/800 [00:00<?, ?it/s]Loading weights concurrently:   6%|▌         | 47/800 [00:00<00:02, 262.62it/s]Loading weights concurrently:  14%|█▎        | 108/800 [00:00<00:02, 338.57it/s]Loading weights concurrently:  25%|██▌       | 201/800 [00:00<00:01, 526.52it/s]Loading weights concurrently:  36%|███▌      | 284/800 [00:00<00:00, 619.26it/s]Loading weights concurrently:  48%|████▊     | 381/800 [00:00<00:00, 713.27it/s]Loading weights concurrently:  58%|█████▊    | 466/800 [00:00<00:00, 735.43it/s]Loading weights concurrently:  69%|██████▉   | 554/800 [00:00<00:00, 773.44it/s]Loading weights concurrently:  81%|████████  | 645/800 [00:00<00:00, 813.71it/s]Loading weights concurrently:  91%|█████████ | 729/800 [00:01<00:00, 680.59it/s]Loading weights concurrently: 100%|██████████| 800/800 [00:01<00:00, 541.93it/s]
+[11/24/2026-06:00:42] [TRT-LLM] [I] [_torch] Model loading metrics for rank 0: checkpoint_preparation_seconds=15.7043, weight_population_seconds=1.4773, checkpoint_finalization_seconds=0.0000, post_load_processing_seconds=0.0148, total_model_loading_seconds=17.3632
+[11/24/2026-06:00:42] [TRT-LLM] [I] [_startup] [startup][pid=81] executor_creation/model: done in 17.644s
+[11/24/2026-06:00:42] [TRT-LLM] [I] [_startup] [startup][pid=81] executor_creation/sampler: start
+[11/24/2026-06:00:42] [TRT-LLM] [I] [_torch] Using Sampler: TorchSampler
+[11/24/2026-06:00:42] [TRT-LLM] [I] [_startup] [startup][pid=81] executor_creation/sampler: done in 0.007s
+[11/24/2026-06:00:42] [TRT-LLM] [I] [_torch] [create_py_executor] Created execution_stream: <torch.cuda.Stream device=cuda:0 cuda_stream=0x42e6a9e0>
+[11/24/2026-06:00:42] [TRT-LLM] [I] [_torch] Memory used at after loading weights (inside torch) in memory usage profiling: 8.81 GiB
+[11/24/2026-06:00:42] [TRT-LLM] [I] [_torch] Memory used at after loading weights (outside torch) in memory usage profiling: 1.23 GiB
+[11/24/2026-06:00:42] [TRT-LLM] [I] [_startup] [startup][pid=81] executor_creation/profiling_kv_cache_allocation: start
+[11/24/2026-06:00:42] [TRT-LLM] [I] [_torch] [KVCacheManager] execution_stream: <torch.cuda.Stream device=cuda:0 cuda_stream=0x42e6a9e0>
+[11/24/2026-06:00:42] [TRT-LLM] [I] [_torch] max_gpu_total_bytes is provided. New quota is 12.118743896484375GiB
+[11/24/2026-06:00:42] [TRT-LLM] [I] [_torch] max_tokens 65536 is provided. Allowed quota from max_tokens is 4.7368421060964465GiB. New quota is 4.7368421060964465GiB
+[11/24/2026-06:00:42] [TRT-LLM] [I] [_torch] KV cache manager v2 device quota set to 4.7368421060964465GiB
+[TRT-LLM] [W] [batchmgr][RANK 0] PooledPhysMemAllocator: device 0 refused gpuDirectRDMACapable for KV cache memory with handle type 1, so the pools are allocated without it. nvidia_peermem (ibv_reg_mr) cannot register this memory for GPUDirect RDMA; dma-buf registration still can.
+[11/24/2026-06:00:42] [TRT-LLM] [I] [_torch] KVCacheManagerV2: IndexMapper capacity=4097 (max_num_sequences=2048, is_disagg=False, disable_overlap_scheduler=False, pp_size=1, num_reserved_index_slots=1, max_beam_width=1, max_copy_beam_width=1)
+[11/24/2026-06:00:42] [TRT-LLM] [I] [_torch] KVCacheManagerV2 role-to-pool/lifecycle mapping:
+[11/24/2026-06:00:42] [TRT-LLM] [I] [_torch] role=key, pool_group_id=0, layer_group_id=0
+[11/24/2026-06:00:42] [TRT-LLM] [I] [_torch] role=value, pool_group_id=0, layer_group_id=0
+[11/24/2026-06:00:42] [TRT-LLM] [I] [_startup] [startup][pid=81] executor_creation/profiling_kv_cache_allocation: done in 0.047s
+[11/24/2026-06:00:42] [TRT-LLM] [I] [_startup] [startup][pid=81] executor_creation/spec_resource_manager: start
+[11/24/2026-06:00:42] [TRT-LLM] [I] [_startup] [startup][pid=81] executor_creation/spec_resource_manager: done in 0.000s
+[11/24/2026-06:00:42] [TRT-LLM] [I] [_startup] [startup][pid=81] executor_creation/drafter: start
+[11/24/2026-06:00:42] [TRT-LLM] [I] [_startup] [startup][pid=81] executor_creation/drafter: done in 0.000s
+[11/24/2026-06:00:42] [TRT-LLM] [I] [_startup] [startup][pid=81] executor_creation/profiling_executor_creation: start
+[11/24/2026-06:00:42] [TRT-LLM] [I] [_torch] max_seq_len=4096, max_num_requests=4096, max_num_tokens=8192, max_batch_size=2048
+[11/24/2026-06:00:42] [TRT-LLM] [W] [_torch] KVCacheV2Scheduler only supports MAX_UTILIZATION for now, got GUARANTEED_NO_EVICT, setting to MAX_UTILIZATION
+[11/24/2026-06:00:42] [TRT-LLM] [I] [_torch] KVCacheV2Scheduler: tokens_per_block=32, max_num_tokens=8192, max_batch_size=2048, draft_mgr=None, cross_mgr=None, enable_prefix_aware_scheduling=True, prefix_skip_enabled=False, enable_recompute_pause=True
+[11/24/2026-06:00:42] [TRT-LLM] [I] [_torch] cache_transceiver is disabled
+[11/24/2026-06:00:42] [TRT-LLM] [I] [_torch] [PyExecutor] execution_stream initialized: <torch.cuda.Stream device=cuda:0 cuda_stream=0x42e6a9e0>; encoder_stream initialized: <torch.cuda.Stream device=cuda:0 cuda_stream=0x42e6ace0>.
+[11/24/2026-06:00:42] [TRT-LLM] [I] [_startup] [startup][pid=81] pre_warmup_rank_barrier: start
+[11/24/2026-06:00:42] [TRT-LLM] [I] [_startup] [startup][pid=81] pre_warmup_rank_barrier: done, total=0.000s, unattributed=0.000s | 
+[11/24/2026-06:00:42] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=memory_profiling][pass=1] sampling_module_prewarm: start
+[11/24/2026-06:01:30] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=memory_profiling][pass=1] sampling_module_prewarm: done in 47.8s
+[11/24/2026-06:01:30] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=memory_profiling][pass=1] cute_dsl_indexer_q: start
+[11/24/2026-06:01:30] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=memory_profiling][pass=1] cute_dsl_indexer_q: done in 0.0s
+[11/24/2026-06:01:30] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=memory_profiling][pass=1] attention_jit: start
+[11/24/2026-06:01:30] [TRT-LLM] [I] [_torch] Running TRTLLM-Gen FMHA JIT warmup
+[11/24/2026-06:01:30] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=memory_profiling][pass=1] attention shape num_tokens=1, num_gen_requests=1: start
+[11/24/2026-06:01:30] [TRT-LLM] [I] [_torch] PDL enabled
+[TRT-LLM] [W] [thop][RANK 0] Attention workspace size is not enough, increase the size from 0 bytes to 26189824 bytes
+[11/24/2026-06:01:35] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=memory_profiling][pass=1] attention shape num_tokens=1, num_gen_requests=1: done in 4.8s
+[11/24/2026-06:01:35] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=memory_profiling][pass=1] attention shape num_tokens=1, num_gen_requests=0: start
+[TRT-LLM] [W] [thop][RANK 0] Attention workspace size is not enough, increase the size from 26189824 bytes to 33562368 bytes
+[11/24/2026-06:01:35] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=memory_profiling][pass=1] attention shape num_tokens=1, num_gen_requests=0: done in 0.1s
+[11/24/2026-06:01:35] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=memory_profiling][pass=1] attention shape num_tokens=2, num_gen_requests=1: start
+[11/24/2026-06:01:35] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=memory_profiling][pass=1] attention shape num_tokens=2, num_gen_requests=1: done in 0.0s
+[11/24/2026-06:01:35] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=memory_profiling][pass=1] attention_jit: done in 4.9s
+[11/24/2026-06:01:35] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=memory_profiling][pass=1] general: start
+[11/24/2026-06:01:35] [TRT-LLM] [I] [_torch] Run warmup with 1 tokens, include 0 generation tokens
+[11/24/2026-06:01:35] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=memory_profiling][pass=1] general shape num_tokens=1, num_gen_tokens=0: done in 0.0s
+[11/24/2026-06:01:35] [TRT-LLM] [I] [_torch] Run warmup with 1 tokens, include 1 generation tokens
+[11/24/2026-06:01:35] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=memory_profiling][pass=1] general shape num_tokens=1, num_gen_tokens=1: done in 0.0s
+[11/24/2026-06:01:35] [TRT-LLM] [I] [_torch] Run warmup with 8192 tokens, include 0 generation tokens
+[TRT-LLM] [W] [thop][RANK 0] Attention workspace size is not enough, increase the size from 33562368 bytes to 83953152 bytes
+[11/24/2026-06:01:36] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=memory_profiling][pass=1] general shape num_tokens=8192, num_gen_tokens=0: done in 0.5s
+[11/24/2026-06:01:36] [TRT-LLM] [I] [_torch] Run warmup with 2048 tokens, include 2048 generation tokens
+[TRT-LLM] [W] [thop][RANK 0] Attention workspace size is not enough, increase the size from 83953152 bytes to 103284736 bytes
+[11/24/2026-06:01:36] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=memory_profiling][pass=1] general shape num_tokens=2048, num_gen_tokens=2048: done in 0.1s
+[11/24/2026-06:01:36] [TRT-LLM] [I] [_torch] Run warmup with 2 tokens, include 0 generation tokens
+[11/24/2026-06:01:36] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=memory_profiling][pass=1] general shape num_tokens=2, num_gen_tokens=0: done in 0.0s
+[11/24/2026-06:01:36] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=memory_profiling][pass=1] general: done in 1.1s
+[11/24/2026-06:01:36] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=memory_profiling][pass=1] autotuner: start
+[11/24/2026-06:01:36] [TRT-LLM] [I] [_torch] Running autotuner warmup (TRT-LLM=True, native MXFP8=False, FlashInfer MXFP8=False)...
+[11/24/2026-06:01:36] [TRT-LLM] [I] [_torch] [Autotuner] Autotuning process starts ...
+[11/24/2026-06:01:36] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=memory_profiling][pass=1] autotuner shape num_tokens=8192, num_gen_requests=0: start
+[11/24/2026-06:01:37] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=memory_profiling][pass=1] autotuner shape num_tokens=8192, num_gen_requests=0: done in 0.5s
+[11/24/2026-06:01:37] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=memory_profiling][pass=1] autotuner shape num_tokens=1, num_gen_requests=1: start
+[11/24/2026-06:01:37] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=memory_profiling][pass=1] autotuner shape num_tokens=1, num_gen_requests=1: done in 0.0s
+[11/24/2026-06:01:37] [TRT-LLM] [I] [_torch] [Autotuner] Autotuning process ends
+[11/24/2026-06:01:37] [TRT-LLM] [I] [_torch] [Autotuner] Cache size after warmup is 0
+[11/24/2026-06:01:37] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=memory_profiling][pass=1] autotuner: done in 0.5s
+[11/24/2026-06:01:37] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=memory_profiling][pass=1] mamba_hybrid: start
+[11/24/2026-06:01:37] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=memory_profiling][pass=1] mamba_hybrid: done in 0.0s
+[11/24/2026-06:01:37] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=memory_profiling][pass=1] cuda_graph_capture: start
+[11/24/2026-06:01:37] [TRT-LLM] [I] [_torch] Running CUDA graph warmup for 19 batch sizes.
+[11/24/2026-06:01:37] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=128, draft_len=0, max_seq_len=4096
+[TRT-LLM] [W] [thop][RANK 0] Attention workspace size is not enough, increase the size from 0 bytes to 30478336 bytes
+[11/24/2026-06:01:37] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=120, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:37] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=112, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:37] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=104, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:37] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=96, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:37] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=88, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:37] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=80, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:37] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=72, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:37] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=64, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:37] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=56, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:37] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=48, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:37] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=40, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:37] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=32, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:37] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=24, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:37] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=16, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:37] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=8, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:37] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=4, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:37] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=2, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:38] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=1, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:38] [TRT-LLM] [I] [_torch] Running CUDA graph capture for 19 batch sizes.
+[11/24/2026-06:01:38] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=128, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:38] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=120, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:38] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=112, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:38] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=104, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:38] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=96, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:38] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=88, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:38] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=80, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:38] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=72, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:38] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=64, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:38] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=56, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:38] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=48, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:38] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=40, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:38] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=32, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:38] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=24, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:38] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=16, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:39] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=8, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:39] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=4, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:39] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=2, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:39] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=1, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:39] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=memory_profiling][pass=1] cuda_graph_capture: done in 1.8s
+[11/24/2026-06:01:39] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=memory_profiling][pass=1] dsa_prewarm: start
+[11/24/2026-06:01:39] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=memory_profiling][pass=1] dsa_prewarm: done in 0.0s
+[11/24/2026-06:01:39] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=memory_profiling][pass=1] memory_pool_prepop: start
+[11/24/2026-06:01:39] [TRT-LLM] [I] [_torch] Run warmup with 8192 tokens, include 0 generation tokens
+[11/24/2026-06:01:39] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=memory_profiling][pass=1] general shape num_tokens=8192, num_gen_tokens=0: done in 0.5s
+[11/24/2026-06:01:39] [TRT-LLM] [I] [_torch] Run warmup with 2048 tokens, include 2048 generation tokens
+[11/24/2026-06:01:39] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=memory_profiling][pass=1] general shape num_tokens=2048, num_gen_tokens=2048: done in 0.1s
+[11/24/2026-06:01:39] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=memory_profiling][pass=1] memory_pool_prepop: done in 0.7s
+[11/24/2026-06:01:39] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=memory_profiling][pass=1] preallocate_padding_dummies: start
+[11/24/2026-06:01:39] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=memory_profiling][pass=1] preallocate_padding_dummies: done in 0.0s
+[11/24/2026-06:01:39] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=memory_profiling][pass=1] summary: total=57.0s | sampling_module_prewarm=47.8s (84%), cute_dsl_indexer_q=0.0s (0%), attention_jit=4.9s (9%), general=1.1s (2%), autotuner=0.5s (1%), mamba_hybrid=0.0s (0%), cuda_graph_capture=1.8s (3%), dsa_prewarm=0.0s (0%), memory_pool_prepop=0.7s (1%), preallocate_padding_dummies=0.0s (0%)
+[11/24/2026-06:01:39] [TRT-LLM] [W] [_torch] `torch.isnan` or `torch.isinf` is not implemented for current kv cache dtype, related checks are skipped
+[11/24/2026-06:01:39] [TRT-LLM] [I] [_torch] global_steady_clock_offset at each rank: [0.0]
+[11/24/2026-06:01:39] [TRT-LLM] [I] [_torch] Setting global_steady_clock_offset: 0.0 seconds for rank 0
+[11/24/2026-06:01:39] [TRT-LLM] [I] [_startup] [startup][pid=81] executor_creation/profiling_executor_creation: done in 57.289s
+[11/24/2026-06:01:39] [TRT-LLM] [I] [_startup] [startup][pid=81] executor_creation/memory_profiling_and_capacity: start
+[11/24/2026-06:01:39] [TRT-LLM] [I] [_torch] Memory used after loading model weights (inside torch) in memory usage profiling: 9.02 GiB
+[11/24/2026-06:01:39] [TRT-LLM] [I] [_torch] Memory used after loading model weights (outside torch) in memory usage profiling: 6.47 GiB
+[11/24/2026-06:01:39] [TRT-LLM] [W] [_torch] Resource manager ResourceManagerType.KV_CACHE_MANAGER does not provide a per-request KV block budget
+[11/24/2026-06:01:40] [TRT-LLM] [I] [_torch] Memory dynamically allocated during inference (inside torch) in memory usage profiling: 0.75 GiB
+[11/24/2026-06:01:40] [TRT-LLM] [I] [_torch] Memory used outside torch (e.g., NCCL and CUDA graphs) in memory usage profiling: 6.54 GiB
+[11/24/2026-06:01:40] [TRT-LLM] [I] [_torch] Reserving 1.45 GiB for the penalty workspace of the overlap-headroom seats, which is allocated on the first penalized request.
+[11/24/2026-06:01:40] [TRT-LLM] [I] [_torch] Peak memory during memory usage profiling (torch + non-torch): 17.76 GiB, available KV cache memory when calculating max tokens: 9.44 GiB, fraction is set 0.9, kv size per token is 73728 bytes/token. device total memory 23.51 GiB, temporary kv cache memory during profiling 4.74 GiB
+[11/24/2026-06:01:40] [TRT-LLM] [I] [_torch] Estimated max memory in KV cache : 9.44 GiB
+[11/24/2026-06:01:40] [TRT-LLM] [I] [_startup] [startup][pid=81] executor_creation/memory_profiling_and_capacity: done in 0.532s
+[11/24/2026-06:01:40] [TRT-LLM] [I] [_startup] [startup][pid=81] executor_creation/profiling_resource_teardown: start
+[11/24/2026-06:01:40] [TRT-LLM] [I] [_startup] [startup][pid=81] executor_creation/profiling_kv_cache_teardown: start
+[11/24/2026-06:01:40] [TRT-LLM] [I] [_startup] [startup][pid=81] executor_creation/profiling_kv_cache_teardown: done in 0.000s
+[11/24/2026-06:01:40] [TRT-LLM] [I] [_startup] [startup][pid=81] executor_creation/profiling_resource_teardown: done in 0.219s
+[11/24/2026-06:01:40] [TRT-LLM] [I] [_startup] [startup][pid=81] executor_creation/final_kv_cache_allocation: start
+[11/24/2026-06:01:40] [TRT-LLM] [W] [_torch] The engine admits up to ~2048 concurrent decode requests (scheduler max_batch_size=2048), but captured CUDA graphs only cover decode batches up to 128 (largest capture 128, enable_padding=True). Decode batches above 128 run in eager mode with a large per-iteration latency penalty, which can cost more throughput than the added concurrency buys. Raise cuda_graph_config.max_batch_size (or add larger cuda_graph_config.batch_sizes) and set cuda_graph_config.enable_padding=True so ragged batches round up to a captured size, or lower max_batch_size if decode above 128 concurrent requests is not intended.
+[11/24/2026-06:01:40] [TRT-LLM] [I] [_torch] [KVCacheManager] execution_stream: <torch.cuda.Stream device=cuda:0 cuda_stream=0x42e6a9e0>
+[11/24/2026-06:01:40] [TRT-LLM] [I] [_torch] max_gpu_total_bytes is provided. New quota is 9.439937639050186GiB
+[11/24/2026-06:01:40] [TRT-LLM] [I] [_torch] max_tokens 119943 is provided. Allowed quota from max_tokens is 8.66929706837982GiB. New quota is 8.66929706837982GiB
+[11/24/2026-06:01:40] [TRT-LLM] [I] [_torch] KV cache manager v2 device quota set to 8.66929706837982GiB
+[TRT-LLM] [W] [batchmgr][RANK 0] PooledPhysMemAllocator: device 0 refused gpuDirectRDMACapable for KV cache memory with handle type 1, so the pools are allocated without it. nvidia_peermem (ibv_reg_mr) cannot register this memory for GPUDirect RDMA; dma-buf registration still can.
+[11/24/2026-06:01:40] [TRT-LLM] [I] [_torch] KVCacheManagerV2: IndexMapper capacity=4097 (max_num_sequences=2048, is_disagg=False, disable_overlap_scheduler=False, pp_size=1, num_reserved_index_slots=1, max_beam_width=1, max_copy_beam_width=1)
+[11/24/2026-06:01:40] [TRT-LLM] [I] [_torch] KVCacheManagerV2 role-to-pool/lifecycle mapping:
+[11/24/2026-06:01:40] [TRT-LLM] [I] [_torch] role=key, pool_group_id=0, layer_group_id=0
+[11/24/2026-06:01:40] [TRT-LLM] [I] [_torch] role=value, pool_group_id=0, layer_group_id=0
+[11/24/2026-06:01:40] [TRT-LLM] [I] [_startup] [startup][pid=81] executor_creation/final_kv_cache_allocation: done in 0.022s
+[11/24/2026-06:01:40] [TRT-LLM] [I] [_startup] [startup][pid=81] executor_creation/final_executor_creation: start
+[11/24/2026-06:01:40] [TRT-LLM] [I] [_torch] max_seq_len=4096, max_num_requests=4096, max_num_tokens=8192, max_batch_size=2048
+[11/24/2026-06:01:40] [TRT-LLM] [W] [_torch] KVCacheV2Scheduler only supports MAX_UTILIZATION for now, got GUARANTEED_NO_EVICT, setting to MAX_UTILIZATION
+[11/24/2026-06:01:40] [TRT-LLM] [I] [_torch] KVCacheV2Scheduler: tokens_per_block=32, max_num_tokens=8192, max_batch_size=2048, draft_mgr=None, cross_mgr=None, enable_prefix_aware_scheduling=True, prefix_skip_enabled=False, enable_recompute_pause=True
+[11/24/2026-06:01:40] [TRT-LLM] [I] [_torch] cache_transceiver is disabled
+[11/24/2026-06:01:40] [TRT-LLM] [I] [_torch] [PyExecutor] execution_stream initialized: <torch.cuda.Stream device=cuda:0 cuda_stream=0x42e6a9e0>; encoder_stream initialized: <torch.cuda.Stream device=cuda:0 cuda_stream=0x42e80af0>.
+[11/24/2026-06:01:40] [TRT-LLM] [I] [_startup] [startup][pid=81] pre_warmup_rank_barrier: start
+[11/24/2026-06:01:40] [TRT-LLM] [I] [_startup] [startup][pid=81] pre_warmup_rank_barrier: done, total=0.000s, unattributed=0.000s | 
+[11/24/2026-06:01:40] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=final_executor][pass=2] sampling_module_prewarm: start
+[11/24/2026-06:01:40] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=final_executor][pass=2] sampling_module_prewarm: done in 0.0s
+[11/24/2026-06:01:40] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=final_executor][pass=2] cute_dsl_indexer_q: start
+[11/24/2026-06:01:40] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=final_executor][pass=2] cute_dsl_indexer_q: done in 0.0s
+[11/24/2026-06:01:40] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=final_executor][pass=2] attention_jit: start
+[11/24/2026-06:01:40] [TRT-LLM] [I] [_torch] Running TRTLLM-Gen FMHA JIT warmup
+[11/24/2026-06:01:40] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=final_executor][pass=2] attention shape num_tokens=1, num_gen_requests=1: start
+[TRT-LLM] [W] [thop][RANK 0] Attention workspace size is not enough, increase the size from 0 bytes to 26189824 bytes
+[11/24/2026-06:01:40] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=final_executor][pass=2] attention shape num_tokens=1, num_gen_requests=1: done in 0.0s
+[11/24/2026-06:01:40] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=final_executor][pass=2] attention shape num_tokens=1, num_gen_requests=0: start
+[TRT-LLM] [W] [thop][RANK 0] Attention workspace size is not enough, increase the size from 26189824 bytes to 33562368 bytes
+[11/24/2026-06:01:41] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=final_executor][pass=2] attention shape num_tokens=1, num_gen_requests=0: done in 0.0s
+[11/24/2026-06:01:41] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=final_executor][pass=2] attention shape num_tokens=2, num_gen_requests=1: start
+[11/24/2026-06:01:41] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=final_executor][pass=2] attention shape num_tokens=2, num_gen_requests=1: done in 0.0s
+[11/24/2026-06:01:41] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=final_executor][pass=2] attention_jit: done in 0.1s
+[11/24/2026-06:01:41] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=final_executor][pass=2] general: start
+[11/24/2026-06:01:41] [TRT-LLM] [I] [_torch] Run warmup with 1 tokens, include 0 generation tokens
+[11/24/2026-06:01:41] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=final_executor][pass=2] general shape num_tokens=1, num_gen_tokens=0: done in 0.0s
+[11/24/2026-06:01:41] [TRT-LLM] [I] [_torch] Run warmup with 1 tokens, include 1 generation tokens
+[11/24/2026-06:01:41] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=final_executor][pass=2] general shape num_tokens=1, num_gen_tokens=1: done in 0.0s
+[11/24/2026-06:01:41] [TRT-LLM] [I] [_torch] Run warmup with 8192 tokens, include 0 generation tokens
+[TRT-LLM] [W] [thop][RANK 0] Attention workspace size is not enough, increase the size from 33562368 bytes to 83953152 bytes
+[11/24/2026-06:01:41] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=final_executor][pass=2] general shape num_tokens=8192, num_gen_tokens=0: done in 0.5s
+[11/24/2026-06:01:41] [TRT-LLM] [I] [_torch] Run warmup with 2048 tokens, include 2048 generation tokens
+[TRT-LLM] [W] [thop][RANK 0] Attention workspace size is not enough, increase the size from 83953152 bytes to 103284736 bytes
+[11/24/2026-06:01:41] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=final_executor][pass=2] general shape num_tokens=2048, num_gen_tokens=2048: done in 0.1s
+[11/24/2026-06:01:41] [TRT-LLM] [I] [_torch] Run warmup with 2 tokens, include 0 generation tokens
+[11/24/2026-06:01:41] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=final_executor][pass=2] general shape num_tokens=2, num_gen_tokens=0: done in 0.0s
+[11/24/2026-06:01:41] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=final_executor][pass=2] general: done in 1.0s
+[11/24/2026-06:01:41] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=final_executor][pass=2] autotuner: start
+[11/24/2026-06:01:41] [TRT-LLM] [I] [_torch] Skipping duplicate autotuner warmup for already completed num_tokens=8192
+[11/24/2026-06:01:41] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=final_executor][pass=2] autotuner: done in 0.0s
+[11/24/2026-06:01:41] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=final_executor][pass=2] mamba_hybrid: start
+[11/24/2026-06:01:41] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=final_executor][pass=2] mamba_hybrid: done in 0.0s
+[11/24/2026-06:01:42] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=final_executor][pass=2] cuda_graph_capture: start
+[11/24/2026-06:01:42] [TRT-LLM] [I] [_torch] Running CUDA graph warmup for 19 batch sizes.
+[11/24/2026-06:01:42] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=128, draft_len=0, max_seq_len=4096
+[TRT-LLM] [W] [thop][RANK 0] Attention workspace size is not enough, increase the size from 0 bytes to 30478336 bytes
+[11/24/2026-06:01:42] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=120, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:42] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=112, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:42] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=104, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:42] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=96, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:42] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=88, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:42] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=80, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:42] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=72, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:42] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=64, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:42] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=56, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:42] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=48, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:42] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=40, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:42] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=32, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:42] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=24, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:42] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=16, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:42] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=8, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:42] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=4, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:42] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=2, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:42] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=1, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:42] [TRT-LLM] [I] [_torch] Running CUDA graph capture for 19 batch sizes.
+[11/24/2026-06:01:42] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=128, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:42] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=120, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:42] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=112, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:42] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=104, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:42] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=96, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:43] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=88, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:43] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=80, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:43] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=72, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:43] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=64, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:43] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=56, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:43] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=48, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:43] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=40, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:43] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=32, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:43] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=24, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:43] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=16, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:43] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=8, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:43] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=4, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:43] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=2, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:43] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=1, draft_len=0, max_seq_len=4096
+[11/24/2026-06:01:43] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=final_executor][pass=2] cuda_graph_capture: done in 1.7s
+[11/24/2026-06:01:43] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=final_executor][pass=2] dsa_prewarm: start
+[11/24/2026-06:01:43] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=final_executor][pass=2] dsa_prewarm: done in 0.0s
+[11/24/2026-06:01:43] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=final_executor][pass=2] memory_pool_prepop: start
+[11/24/2026-06:01:43] [TRT-LLM] [I] [_torch] Run warmup with 8192 tokens, include 0 generation tokens
+[11/24/2026-06:01:44] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=final_executor][pass=2] general shape num_tokens=8192, num_gen_tokens=0: done in 0.5s
+[11/24/2026-06:01:44] [TRT-LLM] [I] [_torch] Run warmup with 2048 tokens, include 2048 generation tokens
+[11/24/2026-06:01:44] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=final_executor][pass=2] general shape num_tokens=2048, num_gen_tokens=2048: done in 0.1s
+[11/24/2026-06:01:44] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=final_executor][pass=2] memory_pool_prepop: done in 0.7s
+[11/24/2026-06:01:44] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=final_executor][pass=2] preallocate_padding_dummies: start
+[11/24/2026-06:01:44] [TRT-LLM] [I] [_torch] Pre-allocated the CUDA graph padding dummy request (draft_len=0) at warmup.
+[11/24/2026-06:01:44] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=final_executor][pass=2] preallocate_padding_dummies: done in 0.0s
+[11/24/2026-06:01:44] [TRT-LLM] [I] [_torch] [warmup][pid=81][rank=0][purpose=final_executor][pass=2] summary: total=3.6s | sampling_module_prewarm=0.0s (0%), cute_dsl_indexer_q=0.0s (0%), attention_jit=0.1s (2%), general=1.0s (27%), autotuner=0.0s (0%), mamba_hybrid=0.0s (0%), cuda_graph_capture=1.7s (47%), dsa_prewarm=0.0s (0%), memory_pool_prepop=0.7s (18%), preallocate_padding_dummies=0.0s (0%)
+[11/24/2026-06:01:44] [TRT-LLM] [W] [_torch] `torch.isnan` or `torch.isinf` is not implemented for current kv cache dtype, related checks are skipped
+[11/24/2026-06:01:44] [TRT-LLM] [I] [_torch] global_steady_clock_offset already set (0:00:00); skipping recalibration for rank 0
+[11/24/2026-06:01:44] [TRT-LLM] [I] [_startup] [startup][pid=81] executor_creation/final_executor_creation: done in 3.815s
+[11/24/2026-06:01:44] [TRT-LLM] [I] [_torch] Setting PyTorch memory fraction to 0.5730520576398805 (13.47113037109375 GiB)
+[11/24/2026-06:01:44] [TRT-LLM] [I] [_torch] LLM Args:
+model='/models/hub/models--nvidia--Qwen3-8B-FP8/snapshots/2cebc4c89e25abc17668c81b01dceaf3d8b914d5' tokenizer=None tokenizer_mode='auto' custom_tokenizer=None post_processor_hook=None skip_tokenizer_init=False trust_remote_code=False tensor_parallel_size=1 dtype='auto' revision=None tokenizer_revision=None model_kwargs=None pipeline_parallel_size=1 context_parallel_size=1 gpus_per_node=1 moe_cluster_parallel_size=-1 moe_tensor_parallel_size=-1 moe_expert_parallel_size=-1 enable_attention_dp=False enable_lm_head_tp_in_adp=False pp_partition=None cp_config=None load_format=<LoadFormat.AUTO: 0> enable_lora=False lora_config=None kv_cache_config=KvCacheConfig(enable_block_reuse=False, max_tokens=119943, max_attention_window=None, sink_token_length=None, free_gpu_memory_fraction=0.9, host_cache_size=0, disk_cache_size=None, disk_cache_path=None, cross_kv_cache_fraction=None, cold_tier_offload_min_priority=None, secondary_offload_min_priority=None, event_buffer_max_size=0, attention_dp_events_gather_period_ms=5, kv_events_config=None, enable_partial_reuse=True, copy_on_partial_reuse=True, use_uvm=False, max_gpu_total_bytes=10136055859, iteration_stats_interval=1, dtype='fp8', mixed_precision_first_n=256, mixed_precision_last_n=256, mamba_ssm_cache_dtype='auto', mamba_ssm_stochastic_rounding=False, mamba_ssm_philox_rounds=10, tokens_per_block=32, mamba_state_cache_interval=None, mamba_state_config=MambaStateConfig(periodic_snapshot_interval=0, additional_snapshot_offsets_from_start=[], additional_snapshot_offsets_from_end=[], enable_branch_snapshot=False), use_kv_cache_manager_v2=True, enable_swa_scratch_reuse=False, kv_cache_event_hash_algo='auto', max_util_for_resume=0.95, enable_kv_pool_rebalance=False, kv_pool_rebalance_config=KvPoolRebalanceConfig(min_sampled_kv_caches=2000, cooldown_secs=120.0, target_ratio_update_interval=100, ratio_tolerance=0.25, moving_average_decay=0.9999, check_interval=10), disk_prefetch_num_reqs=0, fp8_context_mla_kv_len_cap=None, pool_ratio=None, avg_seq_len=None, block_reuse_config=BlockReuseConfig(policy='all_reusable', max_num_turns=1, swa_endpoint_rewind_tokens=0, enable_branch_snapshot=False)) enable_chunked_prefill=False guided_decoding_backend=None batched_logits_processor=None iter_stats_max_iterations=None request_stats_max_iterations=None peft_cache_config=None scheduler_config=SchedulerConfig(capacity_scheduler_policy=<CapacitySchedulerPolicy.GUARANTEED_NO_EVICT: 'GUARANTEED_NO_EVICT'>, context_chunking_policy=None, dynamic_batch_config=None, waiting_queue_policy=<WaitingQueuePolicy.FCFS: 'fcfs'>, use_python_scheduler=False, enable_prefix_aware_scheduling=True) cache_transceiver_config=None sparse_attention_config=None kv_cache_compression_config=None speculative_config=None max_batch_size=2048 max_input_len=1024 max_seq_len=4096 max_beam_width=1 max_num_tokens=8192 gather_generation_logits=False num_postprocess_workers=0 postprocess_tokenizer_dir='/models/hub/models--nvidia--Qwen3-8B-FP8/snapshots/2cebc4c89e25abc17668c81b01dceaf3d8b914d5' num_serve_frontends=1 reasoning_parser=None decoding_config=None mpi_session=None otlp_traces_endpoint=None backend='pytorch' return_perf_metrics=False per_request_spec_decode_stats=False perf_metrics_output_dir=None perf_metrics_max_requests=0 prometheus_metrics_config=None enable_energy_metrics=False orchestrator_type=None env_overrides=None telemetry_config=TelemetryConfig(disabled=False, usage_context=<UsageContext.CLI_SERVE: 'cli_serve'>) generation_config='trtllm' garbage_collection_gen0_threshold=20000 cuda_graph_config=DecodeCudaGraphConfig(batch_sizes=[1, 2, 4, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104, 112, 120, 128], max_batch_size=128, enable_padding=True, mode='decode') encoder_cuda_graph_config=None enable_encoder_decoder_mixed_cuda_graph=True multimodal_config=MultimodalConfig(encoder_cuda_graph=None, encoder_side_stream_max_ahead=0, encoder_cache_max_bytes=134217728, encoder_scheduling_policy=<MultimodalEncoderSchedulingPolicy.DEFAULT: 'DEFAULT'>, video_pruning_rate=None) attention_dp_config=None disable_overlap_scheduler=False enable_return_routed_experts=False lm_head_output_dtype='auto' moe_config=MoeConfig(backend='AUTO', max_num_tokens=None, load_balancer=None, disable_finalize_fusion=False, use_low_precision_moe_combine=False) nvfp4_gemm_config=Nvfp4GemmConfig(allowed_backends=['cutlass', 'cublaslt', 'cutedsl', 'cuda_core']) dwdp_config=None encoder_max_batch_size=None encoder_max_num_tokens=None attn_backend='TRTLLM' enable_mla_skip_correction=False mla_skip_correction_threshold=8.0 sampler_force_async_worker=False enable_in_graph_sampling=False enable_speculative_beam_history_d2h=False enable_early_first_token_response=False enable_low_latency_host_dispatch=False enable_iter_perf_stats=False enable_tokenization_cache=False enable_iter_req_stats=False iter_perf_stats_interval=1 print_iter_log=False batch_wait_timeout_ms=0 batch_wait_timeout_iters=0 batch_wait_max_tokens_ratio=0 bounded_replay_on_generation=False torch_compile_config=None prefill_cuda_graph_backend=<PrefillCudaGraphBackend.DISABLED: 'disabled'> prefill_capture_num_tokens=None enable_autotuner=True use_fine_grained_sync=False enable_layerwise_nvtx_marker=False enable_min_latency=False stream_interval=1 force_dynamic_quantization=False allreduce_strategy='AUTO' checkpoint_loader=None checkpoint_format='HF' checkpoint_io_policy='auto' mx_config=ModelExpressConfig(server_url=None, server_query_timeout_s=None, preshard_strategy='per_module') gms_config=GmsConfig(socket_path=None, mode='auto', tag='weights') kv_connector_config=None mm_encoder_only=False disable_mm_encoder=False encode_only=False ray_worker_extension_cls=None ray_placement_config=None ray_worker_nsight_options=None sleep_config=None reorder_policy_config=None enable_resource_governor=False use_cute_dsl_blockscaling_mm=False use_cute_dsl_blockscaling_bmm=False enable_locality_domains=False use_cute_dsl_bf16_bmm=False use_cute_dsl_bf16_gemm=False max_stats_len=1000 layer_wise_benchmarks_config=LayerwiseBenchmarksConfig(calibration_mode='NONE', calibration_file_path=None, calibration_layer_indices=None) modeling_v2='off'
+[11/24/2026-06:01:44] [TRT-LLM] [I] [_startup] [startup][pid=81] executor_creation/executor_start_worker: start
+[11/24/2026-06:01:44] [TRT-LLM] [I] [_startup] [startup][pid=81] executor_creation/executor_start_worker: done in 0.001s
+[11/24/2026-06:01:44] [TRT-LLM] [I] [_startup] [startup][pid=81] executor_creation: done, total=79.606s, unattributed=0.003s | configuration_and_distributed_init=0.027s, model=17.644s, sampler=0.007s, profiling_kv_cache_allocation=0.047s, spec_resource_manager=0.000s, drafter=0.000s, profiling_executor_creation=57.289s, memory_profiling_and_capacity=0.532s, profiling_resource_teardown=0.219s, final_kv_cache_allocation=0.022s, final_executor_creation=3.815s, executor_start_worker=0.001s
+[11/24/2026-06:01:44] [TRT-LLM] [I] [executor] RPCServer is bound to ipc:///tmp/rpc_test_cc1c15ab-ffe1-4166-898a-7e7483228a9d
+[11/24/2026-06:01:44] [TRT-LLM] [I] [executor] RPC Server started and listening on ipc:///tmp/rpc_test_cc1c15ab-ffe1-4166-898a-7e7483228a9d
+[11/24/2026-06:01:44] [TRT-LLM] [I] [executor] RPC Server has started.
+[11/24/2026-06:01:44] [TRT-LLM] [I] [executor] get signal from executor worker
+[11/24/2026-06:01:44] [TRT-LLM] [I] [_startup] [startup][pid=1] worker_submit_to_ready/worker_initialization_wait: done in 90.158s
+[11/24/2026-06:01:44] [TRT-LLM] [I] [_startup] [startup][pid=1] worker_submit_to_ready: done, total=90.159s, unattributed=0.000s | worker_submit=0.001s, worker_initialization_wait=90.158s
+[11/24/2026-06:01:44] [TRT-LLM] [I] [executor] [startup][pid=1] executor_proxy/workers_ready: elapsed=90.269s
+[11/24/2026-06:01:45] [TRT-LLM] [W] [serve] Resource governor is disabled: the executor backend does not provide a resource_governor_queue (e.g. RPC orchestrator mode or explicit opt-out). Endpoints under /_resource_governor/ will not be available.
+[11/24/2026-06:01:45] [TRT-LLM] [I] [_startup] [startup][pid=1] http_server_start: start
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[11/24/2026-06:01:45] [TRT-LLM] [I] [_startup] [startup][pid=1] http_server_start: done, total=0.100s, unattributed=0.100s | 
+INFO:     172.17.0.1:41888 - "GET /health HTTP/1.1" 200 OK
+INFO:     172.17.0.1:41890 - "GET /health HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42678 - "GET /tokenizer_info HTTP/1.1" 404 Not Found
+INFO:     172.17.0.1:42678 - "GET /tokenizer_info HTTP/1.1" 404 Not Found
+INFO:     172.17.0.1:42678 - "GET /tokenizer_info HTTP/1.1" 404 Not Found
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42692 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42804 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42756 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42814 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42716 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42770 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42796 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42806 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42816 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42786 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42824 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42730 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42708 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42686 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42710 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42746 - "POST /v1/completions HTTP/1.1" 200 OK

@@ -1,0 +1,7 @@
+Generating '/tmp/nsys-root/nsys-report-2849.qdstrm'
+[1/1] [0%                          ] c1_in128.nsys-rep[1/1] [0%                          ] c1_in128.nsys-rep[1/1] [1%                          ] c1_in128.nsys-rep[1/1] [2%                          ] c1_in128.nsys-rep[1/1] [5%                          ] c1_in128.nsys-rep[1/1] [6%                          ] c1_in128.nsys-rep[1/1] [7%                          ] c1_in128.nsys-rep[1/1] [8%                          ] c1_in128.nsys-rep[1/1] [9%                          ] c1_in128.nsys-rep[1/1] [11%                         ] c1_in128.nsys-rep[1/1] [12%                         ] c1_in128.nsys-rep[1/1] [14%                         ] c1_in128.nsys-rep[1/1] [=15%                        ] c1_in128.nsys-rep[1/1] [=16%                        ] c1_in128.nsys-rep[1/1] [==18%                       ] c1_in128.nsys-rep[1/1] [==19%                       ] c1_in128.nsys-rep[1/1] [==20%                       ] c1_in128.nsys-rep[1/1] [=======================93%  ] c1_in128.nsys-rep[1/1] [=======================96%  ] c1_in128.nsys-rep[1/1] [========================98% ] c1_in128.nsys-rep[1/1] [========================100%] c1_in128.nsys-rep[1/1] [========================100%] c1_in128.nsys-rep
+Generated:
+	/out/c1_in128.nsys-rep
+Generating SQLite file /out/c1_in128.sqlite from /out/c1_in128.nsys-rep
+Processing [/out/c1_in128.sqlite] with [/usr/local/cuda-13.4/NsightSystems-cli-2026.5.1/target-linux-x64/reports/cuda_gpu_kern_sum.py] to [/out/c1_in128_cuda_gpu_kern_sum.csv]... PROCESSED
+

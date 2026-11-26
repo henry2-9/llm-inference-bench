@@ -1,0 +1,7 @@
+Generating '/tmp/nsys-root/nsys-report-7d60.qdstrm'
+[1/1] [0%                          ] c4_in2048.nsys-rep[1/1] [0%                          ] c4_in2048.nsys-rep[1/1] [1%                          ] c4_in2048.nsys-rep[1/1] [2%                          ] c4_in2048.nsys-rep[1/1] [5%                          ] c4_in2048.nsys-rep[1/1] [6%                          ] c4_in2048.nsys-rep[1/1] [7%                          ] c4_in2048.nsys-rep[1/1] [8%                          ] c4_in2048.nsys-rep[1/1] [9%                          ] c4_in2048.nsys-rep[1/1] [10%                         ] c4_in2048.nsys-rep[1/1] [12%                         ] c4_in2048.nsys-rep[1/1] [14%                         ] c4_in2048.nsys-rep[1/1] [=16%                        ] c4_in2048.nsys-rep[1/1] [==18%                       ] c4_in2048.nsys-rep[1/1] [==19%                       ] c4_in2048.nsys-rep[1/1] [==20%                       ] c4_in2048.nsys-rep[1/1] [=======================93%  ] c4_in2048.nsys-rep[1/1] [=======================96%  ] c4_in2048.nsys-rep[1/1] [========================98% ] c4_in2048.nsys-rep[1/1] [========================100%] c4_in2048.nsys-rep[1/1] [========================100%] c4_in2048.nsys-rep
+Generated:
+	/out/c4_in2048.nsys-rep
+Generating SQLite file /out/c4_in2048.sqlite from /out/c4_in2048.nsys-rep
+Processing [/out/c4_in2048.sqlite] with [/usr/local/cuda-13.4/NsightSystems-cli-2026.5.1/target-linux-x64/reports/cuda_gpu_kern_sum.py] to [/out/c4_in2048_cuda_gpu_kern_sum.csv]... PROCESSED
+

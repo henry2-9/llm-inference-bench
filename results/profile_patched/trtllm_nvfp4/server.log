@@ -1,0 +1,450 @@
+Skipping import of cpp extensions due to incompatible torch version 2.14.0a0+b2c75dd062.nv26.09 for torchao version 0.15.0             Please see https://github.com/pytorch/ao/issues/2919 for more info
+[TensorRT-LLM] TensorRT LLM version: 1.4.0rc2
+/usr/local/lib/python3.12/dist-packages/tensorrt_llm/serve/openai_protocol.py:288: UserWarning: Field name "schema" in "ResponseFormat" shadows an attribute in parent "OpenAIBaseModel"
+  class ResponseFormat(OpenAIBaseModel):
+[11/25/2026-05:59:17] [TRT-LLM] [I] [llmapi] Using LLM with PyTorch backend
+[11/25/2026-05:59:17] [TRT-LLM] [I] [llmapi] neither checkpoint_format nor checkpoint_loader were provided, checkpoint_format will be set to HF.
+[11/25/2026-05:59:17] [TRT-LLM] [I] [llmapi] Found /models/hub/models--nvidia--Qwen3-8B-NVFP4/snapshots/ccd10a893cbca613259517c3efe08e151ddf2b8e/hf_quant_config.json, pre-quantized checkpoint is used.
+[11/25/2026-05:59:17] [TRT-LLM] [W] [quantize] Inline 'config.json.quantization_config' diverges from 'hf_quant_config.json':
+  - group_size: file=16, inline=None
+[11/25/2026-05:59:17] [TRT-LLM] [I] [llmapi] Setting quant_algo=NVFP4 from HF quant config.
+[11/25/2026-05:59:17] [TRT-LLM] [I] [llmapi] Setting group_size=16 from HF quant config.
+[11/25/2026-05:59:17] [TRT-LLM] [I] [llmapi] Setting exclude_modules=['lm_head'] from HF quant config.
+`torch_dtype` is deprecated! Use `dtype` instead!
+[11/25/2026-05:59:18] [TRT-LLM] [W] [quantize] Inline 'config.json.quantization_config' diverges from 'hf_quant_config.json':
+  - group_size: file=16, inline=None
+[11/25/2026-05:59:18] [TRT-LLM] [W] [executor] Orchestrator is creating IPC executor
+[11/25/2026-05:59:18] [TRT-LLM] [I] [executor] [startup][pid=79] executor_proxy: start
+[11/25/2026-05:59:18] [TRT-LLM] [I] [_startup] [startup][pid=79] mpi_session_setup: start
+[33;20mrank 0 using MpiPoolSession to spawn MPI processes
+[11/25/2026-05:59:18] [TRT-LLM] [I] [_startup] [startup][pid=79] mpi_session_setup: done, total=0.000s, unattributed=0.000s | 
+[11/25/2026-05:59:18] [TRT-LLM] [I] [executor] Generating a new HMAC key for server proxy_request_queue
+[11/25/2026-05:59:18] [TRT-LLM] [I] [executor] Generating a new HMAC key for server proxy_result_queue
+[11/25/2026-05:59:18] [TRT-LLM] [I] [executor] Generating a new HMAC key for server worker_init_status_queue
+[11/25/2026-05:59:18] [TRT-LLM] [I] [executor] [startup][pid=79] executor_proxy/pre_worker_setup: done in 0.018s (includes mpi_session_setup)
+[11/25/2026-05:59:18] [TRT-LLM] [I] [_startup] [startup][pid=79] worker_submit_to_ready: start
+[11/25/2026-05:59:18] [TRT-LLM] [I] [_startup] [startup][pid=79] worker_submit_to_ready/worker_submit: start
+[11/25/2026-05:59:18] [TRT-LLM] [I] [_startup] [startup][pid=79] worker_submit_to_ready/worker_submit: done in 0.000s
+[11/25/2026-05:59:18] [TRT-LLM] [I] [_startup] [startup][pid=79] worker_submit_to_ready/worker_initialization_wait: start
+[0mSkipping import of cpp extensions due to incompatible torch version 2.14.0a0+b2c75dd062.nv26.09 for torchao version 0.15.0             Please see https://github.com/pytorch/ao/issues/2919 for more info
+[TensorRT-LLM] TensorRT LLM version: 1.4.0rc2
+/usr/local/lib/python3.12/dist-packages/tensorrt_llm/serve/openai_protocol.py:288: UserWarning: Field name "schema" in "ResponseFormat" shadows an attribute in parent "OpenAIBaseModel"
+  class ResponseFormat(OpenAIBaseModel):
+[TRT-LLM] [I] [runtime][RANK 0] Refreshed the MPI local session
+[11/25/2026-05:59:29] [TRT-LLM] [I] [executor] get signal from executor worker
+[11/25/2026-05:59:30] [TRT-LLM] [I] [llmapi] Worker process 162 CPU affinity set to [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19] for optimal NUMA-aware scheduling (57/57 threads).
+[11/25/2026-05:59:30] [TRT-LLM] [I] [_startup] [startup][pid=162] executor_creation: start
+`torch_dtype` is deprecated! Use `dtype` instead!
+[11/25/2026-05:59:30] [TRT-LLM] [W] [quantize] Inline 'config.json.quantization_config' diverges from 'hf_quant_config.json':
+  - group_size: file=16, inline=None
+[11/25/2026-05:59:30] [TRT-LLM] [I] [_torch] ATTENTION RUNTIME FEATURES:  AttentionRuntimeFeatures(chunked_prefill=False, cache_reuse=False, has_speculative_draft_tokens=False, chunk_size=8192, chunked_prefill_buffer_batch_size=4)
+[11/25/2026-05:59:30] [TRT-LLM] [I] [_startup] [startup][pid=162] executor_creation/configuration_and_distributed_init: done in 0.023s
+[11/25/2026-05:59:30] [TRT-LLM] [I] [_startup] [startup][pid=162] executor_creation/model: start
+[11/25/2026-05:59:32] [TRT-LLM] [W] [quantize] Inline 'config.json.quantization_config' diverges from 'hf_quant_config.json':
+  - group_size: file=16, inline=None
+[11/25/2026-05:59:32] [TRT-LLM] [W] [quantize] Inline 'config.json.quantization_config' diverges from 'hf_quant_config.json':
+  - group_size: file=16, inline=None
+[11/25/2026-05:59:32] [TRT-LLM] [I] [_torch] Validating KV Cache config against kv_cache_dtype="fp8"
+[11/25/2026-05:59:32] [TRT-LLM] [I] [_torch] Use 5.96 GB for model weights.
+[11/25/2026-05:59:32] [TRT-LLM] [I] [_torch] Rank-striped checkpoint read-ahead activated: local_rank=0, local_size=1, workers=16, assigned_bytes=6397066384, checkpoint_bytes=6397066384.
+[11/25/2026-05:59:32] [TRT-LLM] [I] [_torch] Start to load safetensor file /models/hub/models--nvidia--Qwen3-8B-NVFP4/snapshots/ccd10a893cbca613259517c3efe08e151ddf2b8e/model-00001-of-00002.safetensors
+[11/25/2026-05:59:32] [TRT-LLM] [I] [_torch] Start to load safetensor file /models/hub/models--nvidia--Qwen3-8B-NVFP4/snapshots/ccd10a893cbca613259517c3efe08e151ddf2b8e/model-00002-of-00002.safetensors
+Mapping safetensors weights in parallel:   0%|          | 0/2 [00:00<?, ?it/s]Mapping safetensors weights in parallel:  50%|█████     | 1/2 [00:00<00:00,  6.19it/s]Mapping safetensors weights in parallel: 100%|██████████| 2/2 [00:02<00:00,  1.18s/it]Mapping safetensors weights in parallel: 100%|██████████| 2/2 [00:02<00:00,  1.03s/it]
+Loading weights concurrently:   0%|          | 0/800 [00:00<?, ?it/s]Loading weights concurrently:   9%|▉         | 73/800 [00:02<00:23, 30.85it/s]Loading weights concurrently:  13%|█▎        | 104/800 [00:02<00:14, 46.69it/s]Loading weights concurrently:  16%|█▌        | 124/800 [00:02<00:11, 57.70it/s]Loading weights concurrently:  27%|██▋       | 216/800 [00:02<00:04, 140.10it/s]Loading weights concurrently:  33%|███▎      | 263/800 [00:02<00:03, 155.28it/s]Loading weights concurrently:  38%|███▊      | 300/800 [00:03<00:02, 173.21it/s]Loading weights concurrently:  42%|████▏     | 334/800 [00:03<00:02, 189.54it/s]Loading weights concurrently:  46%|████▌     | 368/800 [00:03<00:02, 202.52it/s]Loading weights concurrently:  50%|█████     | 400/800 [00:03<00:01, 216.31it/s]Loading weights concurrently:  54%|█████▍    | 434/800 [00:03<00:01, 209.51it/s]Loading weights concurrently:  57%|█████▊    | 460/800 [00:03<00:01, 210.07it/s]Loading weights concurrently:  61%|██████    | 485/800 [00:03<00:01, 201.76it/s]Loading weights concurrently:  64%|██████▎   | 509/800 [00:03<00:01, 205.62it/s]Loading weights concurrently:  66%|██████▋   | 532/800 [00:04<00:01, 157.05it/s]Loading weights concurrently:  73%|███████▎  | 587/800 [00:04<00:00, 220.12it/s]Loading weights concurrently:  76%|███████▋  | 612/800 [00:04<00:00, 209.17it/s]Loading weights concurrently:  79%|███████▉  | 635/800 [00:04<00:00, 196.07it/s]Loading weights concurrently:  82%|████████▏ | 656/800 [00:04<00:00, 196.15it/s]Loading weights concurrently:  85%|████████▍ | 678/800 [00:04<00:00, 177.75it/s]Loading weights concurrently:  87%|████████▋ | 697/800 [00:05<00:00, 175.33it/s]Loading weights concurrently:  96%|█████████▌| 768/800 [00:05<00:00, 302.44it/s]Loading weights concurrently: 100%|██████████| 800/800 [00:05<00:00, 145.89it/s]
+[11/25/2026-05:59:40] [TRT-LLM] [I] [_torch] Checkpoint I/O policy: requested=auto, selected=rank_striped_read_ahead, activated=True, effective=rank_striped_read_ahead, fallback_reason=none.
+[11/25/2026-05:59:40] [TRT-LLM] [I] [_torch] Model loading metrics for rank 0: checkpoint_preparation_seconds=2.0591, weight_population_seconds=5.4861, checkpoint_finalization_seconds=0.0001, post_load_processing_seconds=0.1427, total_model_loading_seconds=7.8488
+[11/25/2026-05:59:40] [TRT-LLM] [I] [_startup] [startup][pid=162] executor_creation/model: done in 10.142s
+[11/25/2026-05:59:40] [TRT-LLM] [I] [_startup] [startup][pid=162] executor_creation/sampler: start
+[11/25/2026-05:59:40] [TRT-LLM] [I] [_torch] Using Sampler: TorchSampler
+[11/25/2026-05:59:40] [TRT-LLM] [I] [_startup] [startup][pid=162] executor_creation/sampler: done in 0.007s
+[11/25/2026-05:59:40] [TRT-LLM] [I] [_torch] [create_py_executor] Created execution_stream: <torch.cuda.Stream device=cuda:0 cuda_stream=0x569d4a80>
+[11/25/2026-05:59:40] [TRT-LLM] [I] [_torch] Memory used at after loading weights (inside torch) in memory usage profiling: 6.03 GiB
+[11/25/2026-05:59:40] [TRT-LLM] [I] [_torch] Memory used at after loading weights (outside torch) in memory usage profiling: 2.38 GiB
+[11/25/2026-05:59:40] [TRT-LLM] [I] [_startup] [startup][pid=162] executor_creation/profiling_kv_cache_allocation: start
+[11/25/2026-05:59:40] [TRT-LLM] [I] [_torch] [KVCacheManager] execution_stream: <torch.cuda.Stream device=cuda:0 cuda_stream=0x569d4a80>
+[11/25/2026-05:59:40] [TRT-LLM] [I] [_torch] max_gpu_total_bytes is provided. New quota is 13.59173583984375GiB
+[11/25/2026-05:59:40] [TRT-LLM] [I] [_torch] max_tokens 65536 is provided. Allowed quota from max_tokens is 4.7368421060964465GiB. New quota is 4.7368421060964465GiB
+[11/25/2026-05:59:40] [TRT-LLM] [I] [_torch] KV cache manager v2 device quota set to 4.7368421060964465GiB
+[TRT-LLM] [W] [batchmgr][RANK 0] PooledPhysMemAllocator: device 0 refused gpuDirectRDMACapable for KV cache memory with handle type 1, so the pools are allocated without it. nvidia_peermem (ibv_reg_mr) cannot register this memory for GPUDirect RDMA; dma-buf registration still can.
+[11/25/2026-05:59:40] [TRT-LLM] [I] [_torch] KVCacheManagerV2: IndexMapper capacity=4097 (max_num_sequences=2048, is_disagg=False, disable_overlap_scheduler=False, pp_size=1, num_reserved_index_slots=1, max_beam_width=1, max_copy_beam_width=1)
+[11/25/2026-05:59:40] [TRT-LLM] [I] [_torch] KVCacheManagerV2 role-to-pool/lifecycle mapping:
+[11/25/2026-05:59:40] [TRT-LLM] [I] [_torch] role=key, pool_group_id=0, layer_group_id=0
+[11/25/2026-05:59:40] [TRT-LLM] [I] [_torch] role=value, pool_group_id=0, layer_group_id=0
+[11/25/2026-05:59:40] [TRT-LLM] [I] [_startup] [startup][pid=162] executor_creation/profiling_kv_cache_allocation: done in 0.022s
+[11/25/2026-05:59:40] [TRT-LLM] [I] [_startup] [startup][pid=162] executor_creation/spec_resource_manager: start
+[11/25/2026-05:59:40] [TRT-LLM] [I] [_startup] [startup][pid=162] executor_creation/spec_resource_manager: done in 0.000s
+[11/25/2026-05:59:40] [TRT-LLM] [I] [_startup] [startup][pid=162] executor_creation/drafter: start
+[11/25/2026-05:59:40] [TRT-LLM] [I] [_startup] [startup][pid=162] executor_creation/drafter: done in 0.000s
+[11/25/2026-05:59:40] [TRT-LLM] [I] [_startup] [startup][pid=162] executor_creation/profiling_executor_creation: start
+[11/25/2026-05:59:40] [TRT-LLM] [I] [_torch] max_seq_len=4096, max_num_requests=4096, max_num_tokens=8192, max_batch_size=2048
+[11/25/2026-05:59:40] [TRT-LLM] [W] [_torch] KVCacheV2Scheduler only supports MAX_UTILIZATION for now, got GUARANTEED_NO_EVICT, setting to MAX_UTILIZATION
+[11/25/2026-05:59:40] [TRT-LLM] [I] [_torch] KVCacheV2Scheduler: tokens_per_block=32, max_num_tokens=8192, max_batch_size=2048, draft_mgr=None, cross_mgr=None, enable_prefix_aware_scheduling=True, prefix_skip_enabled=False, enable_recompute_pause=True
+[11/25/2026-05:59:40] [TRT-LLM] [I] [_torch] cache_transceiver is disabled
+[11/25/2026-05:59:40] [TRT-LLM] [I] [_torch] [PyExecutor] execution_stream initialized: <torch.cuda.Stream device=cuda:0 cuda_stream=0x569d4a80>; encoder_stream initialized: <torch.cuda.Stream device=cuda:0 cuda_stream=0x569d4d80>.
+[11/25/2026-05:59:40] [TRT-LLM] [I] [_startup] [startup][pid=162] pre_warmup_rank_barrier: start
+[11/25/2026-05:59:40] [TRT-LLM] [I] [_startup] [startup][pid=162] pre_warmup_rank_barrier: done, total=0.000s, unattributed=0.000s | 
+[11/25/2026-05:59:40] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=memory_profiling][pass=1] sampling_module_prewarm: start
+[11/25/2026-06:00:56] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=memory_profiling][pass=1] sampling_module_prewarm: done in 76.3s
+[11/25/2026-06:00:56] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=memory_profiling][pass=1] cute_dsl_indexer_q: start
+[11/25/2026-06:00:56] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=memory_profiling][pass=1] cute_dsl_indexer_q: done in 0.0s
+[11/25/2026-06:00:56] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=memory_profiling][pass=1] attention_jit: start
+[11/25/2026-06:00:56] [TRT-LLM] [I] [_torch] Running TRTLLM-Gen FMHA JIT warmup
+[11/25/2026-06:00:56] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=memory_profiling][pass=1] attention shape num_tokens=1, num_gen_requests=1: start
+[11/25/2026-06:00:56] [TRT-LLM] [I] [_torch] PDL enabled
+[TRT-LLM] [W] [thop][RANK 0] Attention workspace size is not enough, increase the size from 0 bytes to 26189824 bytes
+[11/25/2026-06:01:04] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=memory_profiling][pass=1] attention shape num_tokens=1, num_gen_requests=1: done in 8.1s
+[11/25/2026-06:01:04] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=memory_profiling][pass=1] attention shape num_tokens=1, num_gen_requests=0: start
+[TRT-LLM] [W] [thop][RANK 0] Attention workspace size is not enough, increase the size from 26189824 bytes to 33555712 bytes
+[11/25/2026-06:01:04] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=memory_profiling][pass=1] attention shape num_tokens=1, num_gen_requests=0: done in 0.0s
+[11/25/2026-06:01:04] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=memory_profiling][pass=1] attention shape num_tokens=2, num_gen_requests=1: start
+[11/25/2026-06:01:04] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=memory_profiling][pass=1] attention shape num_tokens=2, num_gen_requests=1: done in 0.0s
+[11/25/2026-06:01:04] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=memory_profiling][pass=1] attention_jit: done in 8.2s
+[11/25/2026-06:01:04] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=memory_profiling][pass=1] general: start
+[11/25/2026-06:01:04] [TRT-LLM] [I] [_torch] Run warmup with 1 tokens, include 0 generation tokens
+[11/25/2026-06:01:05] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=memory_profiling][pass=1] general shape num_tokens=1, num_gen_tokens=0: done in 0.0s
+[11/25/2026-06:01:05] [TRT-LLM] [I] [_torch] Run warmup with 1 tokens, include 1 generation tokens
+[11/25/2026-06:01:05] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=memory_profiling][pass=1] general shape num_tokens=1, num_gen_tokens=1: done in 0.0s
+[11/25/2026-06:01:05] [TRT-LLM] [I] [_torch] Run warmup with 8192 tokens, include 0 generation tokens
+[TRT-LLM] [W] [thop][RANK 0] Attention workspace size is not enough, increase the size from 33555712 bytes to 33620992 bytes
+[11/25/2026-06:01:05] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=memory_profiling][pass=1] general shape num_tokens=8192, num_gen_tokens=0: done in 0.9s
+[11/25/2026-06:01:05] [TRT-LLM] [I] [_torch] Run warmup with 2048 tokens, include 2048 generation tokens
+[TRT-LLM] [W] [thop][RANK 0] Attention workspace size is not enough, increase the size from 33620992 bytes to 103284736 bytes
+[11/25/2026-06:01:06] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=memory_profiling][pass=1] general shape num_tokens=2048, num_gen_tokens=2048: done in 0.2s
+[11/25/2026-06:01:06] [TRT-LLM] [I] [_torch] Run warmup with 2 tokens, include 0 generation tokens
+[11/25/2026-06:01:06] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=memory_profiling][pass=1] general shape num_tokens=2, num_gen_tokens=0: done in 0.0s
+[11/25/2026-06:01:06] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=memory_profiling][pass=1] general: done in 1.5s
+[11/25/2026-06:01:06] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=memory_profiling][pass=1] autotuner: start
+[11/25/2026-06:01:06] [TRT-LLM] [I] [_torch] Running autotuner warmup (TRT-LLM=True, native MXFP8=False, FlashInfer MXFP8=False)...
+[11/25/2026-06:01:06] [TRT-LLM] [I] [_torch] [Autotuner] Autotuning process starts ...
+[11/25/2026-06:01:06] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=memory_profiling][pass=1] autotuner shape num_tokens=8192, num_gen_requests=0: start
+[11/25/2026-06:01:07] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=memory_profiling][pass=1] autotuner shape num_tokens=8192, num_gen_requests=0: done in 0.9s
+[11/25/2026-06:01:07] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=memory_profiling][pass=1] autotuner shape num_tokens=1, num_gen_requests=1: start
+[11/25/2026-06:01:07] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=memory_profiling][pass=1] autotuner shape num_tokens=1, num_gen_requests=1: done in 0.0s
+[11/25/2026-06:01:07] [TRT-LLM] [I] [_torch] [Autotuner] Autotuning process ends
+[11/25/2026-06:01:07] [TRT-LLM] [I] [_torch] [Autotuner] Cache size after warmup is 0
+[11/25/2026-06:01:07] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=memory_profiling][pass=1] autotuner: done in 0.9s
+[11/25/2026-06:01:07] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=memory_profiling][pass=1] mamba_hybrid: start
+[11/25/2026-06:01:07] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=memory_profiling][pass=1] mamba_hybrid: done in 0.0s
+[11/25/2026-06:01:07] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=memory_profiling][pass=1] cuda_graph_capture: start
+[11/25/2026-06:01:07] [TRT-LLM] [I] [_torch] Running CUDA graph warmup for 19 batch sizes.
+[11/25/2026-06:01:07] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=128, draft_len=0, max_seq_len=4096
+[TRT-LLM] [W] [thop][RANK 0] Attention workspace size is not enough, increase the size from 0 bytes to 30478336 bytes
+[11/25/2026-06:01:07] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=120, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:07] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=112, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:07] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=104, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:07] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=96, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:07] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=88, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:07] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=80, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:07] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=72, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:07] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=64, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:07] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=56, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:07] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=48, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:07] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=40, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:07] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=32, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:07] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=24, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:07] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=16, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:08] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=8, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:08] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=4, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:08] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=2, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:08] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=1, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:08] [TRT-LLM] [I] [_torch] Running CUDA graph capture for 19 batch sizes.
+[11/25/2026-06:01:08] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=128, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:08] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=120, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:08] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=112, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:08] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=104, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:08] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=96, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:08] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=88, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:08] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=80, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:08] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=72, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:08] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=64, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:08] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=56, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:08] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=48, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:08] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=40, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:08] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=32, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:08] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=24, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:08] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=16, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:09] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=8, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:09] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=4, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:09] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=2, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:09] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=1, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:09] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=memory_profiling][pass=1] cuda_graph_capture: done in 1.6s
+[11/25/2026-06:01:09] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=memory_profiling][pass=1] dsa_prewarm: start
+[11/25/2026-06:01:09] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=memory_profiling][pass=1] dsa_prewarm: done in 0.0s
+[11/25/2026-06:01:09] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=memory_profiling][pass=1] memory_pool_prepop: start
+[11/25/2026-06:01:09] [TRT-LLM] [I] [_torch] Run warmup with 8192 tokens, include 0 generation tokens
+[11/25/2026-06:01:10] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=memory_profiling][pass=1] general shape num_tokens=8192, num_gen_tokens=0: done in 0.9s
+[11/25/2026-06:01:10] [TRT-LLM] [I] [_torch] Run warmup with 2048 tokens, include 2048 generation tokens
+[11/25/2026-06:01:10] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=memory_profiling][pass=1] general shape num_tokens=2048, num_gen_tokens=2048: done in 0.2s
+[11/25/2026-06:01:10] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=memory_profiling][pass=1] memory_pool_prepop: done in 1.2s
+[11/25/2026-06:01:10] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=memory_profiling][pass=1] preallocate_padding_dummies: start
+[11/25/2026-06:01:10] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=memory_profiling][pass=1] preallocate_padding_dummies: done in 0.0s
+[11/25/2026-06:01:10] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=memory_profiling][pass=1] summary: total=90.0s | sampling_module_prewarm=76.3s (85%), cute_dsl_indexer_q=0.0s (0%), attention_jit=8.2s (9%), general=1.5s (2%), autotuner=0.9s (1%), mamba_hybrid=0.0s (0%), cuda_graph_capture=1.6s (2%), dsa_prewarm=0.0s (0%), memory_pool_prepop=1.2s (1%), preallocate_padding_dummies=0.0s (0%)
+[11/25/2026-06:01:10] [TRT-LLM] [W] [_torch] [warmup][pid=162][rank=0][purpose=memory_profiling][pass=1] slow phases (>60s): sampling_module_prewarm=76.3s
+[11/25/2026-06:01:10] [TRT-LLM] [W] [_torch] `torch.isnan` or `torch.isinf` is not implemented for current kv cache dtype, related checks are skipped
+[11/25/2026-06:01:10] [TRT-LLM] [I] [_torch] global_steady_clock_offset at each rank: [0.0]
+[11/25/2026-06:01:10] [TRT-LLM] [I] [_torch] Setting global_steady_clock_offset: 0.0 seconds for rank 0
+[11/25/2026-06:01:10] [TRT-LLM] [I] [_startup] [startup][pid=162] executor_creation/profiling_executor_creation: done in 90.266s
+[11/25/2026-06:01:10] [TRT-LLM] [I] [_startup] [startup][pid=162] executor_creation/memory_profiling_and_capacity: start
+[11/25/2026-06:01:10] [TRT-LLM] [I] [_torch] Memory used after loading model weights (inside torch) in memory usage profiling: 6.17 GiB
+[11/25/2026-06:01:10] [TRT-LLM] [I] [_torch] Memory used after loading model weights (outside torch) in memory usage profiling: 7.45 GiB
+[11/25/2026-06:01:10] [TRT-LLM] [W] [_torch] Resource manager ResourceManagerType.KV_CACHE_MANAGER does not provide a per-request KV block budget
+[11/25/2026-06:01:11] [TRT-LLM] [I] [_torch] Memory dynamically allocated during inference (inside torch) in memory usage profiling: 0.81 GiB
+[11/25/2026-06:01:11] [TRT-LLM] [I] [_torch] Memory used outside torch (e.g., NCCL and CUDA graphs) in memory usage profiling: 7.51 GiB
+[11/25/2026-06:01:11] [TRT-LLM] [I] [_torch] Reserving 1.45 GiB for the penalty workspace of the overlap-headroom seats, which is allocated on the first penalized request.
+[11/25/2026-06:01:11] [TRT-LLM] [I] [_torch] Peak memory during memory usage profiling (torch + non-torch): 15.94 GiB, available KV cache memory when calculating max tokens: 11.08 GiB, fraction is set 0.9, kv size per token is 73728 bytes/token. device total memory 23.51 GiB, temporary kv cache memory during profiling 4.74 GiB
+[11/25/2026-06:01:11] [TRT-LLM] [I] [_torch] Estimated max memory in KV cache : 11.08 GiB
+[11/25/2026-06:01:11] [TRT-LLM] [I] [_startup] [startup][pid=162] executor_creation/memory_profiling_and_capacity: done in 1.013s
+[11/25/2026-06:01:11] [TRT-LLM] [I] [_startup] [startup][pid=162] executor_creation/profiling_resource_teardown: start
+[11/25/2026-06:01:11] [TRT-LLM] [I] [_startup] [startup][pid=162] executor_creation/profiling_kv_cache_teardown: start
+[11/25/2026-06:01:11] [TRT-LLM] [I] [_startup] [startup][pid=162] executor_creation/profiling_kv_cache_teardown: done in 0.000s
+[11/25/2026-06:01:11] [TRT-LLM] [I] [_startup] [startup][pid=162] executor_creation/profiling_resource_teardown: done in 0.244s
+[11/25/2026-06:01:11] [TRT-LLM] [I] [_startup] [startup][pid=162] executor_creation/final_kv_cache_allocation: start
+[11/25/2026-06:01:11] [TRT-LLM] [W] [_torch] The engine admits up to ~2048 concurrent decode requests (scheduler max_batch_size=2048), but captured CUDA graphs only cover decode batches up to 128 (largest capture 128, enable_padding=True). Decode batches above 128 run in eager mode with a large per-iteration latency penalty, which can cost more throughput than the added concurrency buys. Raise cuda_graph_config.max_batch_size (or add larger cuda_graph_config.batch_sizes) and set cuda_graph_config.enable_padding=True so ragged batches round up to a captured size, or lower max_batch_size if decode above 128 concurrent requests is not intended.
+[11/25/2026-06:01:11] [TRT-LLM] [I] [_torch] [KVCacheManager] execution_stream: <torch.cuda.Stream device=cuda:0 cuda_stream=0x569d4a80>
+[11/25/2026-06:01:11] [TRT-LLM] [I] [_torch] max_gpu_total_bytes is provided. New quota is 11.077782439999282GiB
+[11/25/2026-06:01:11] [TRT-LLM] [I] [_torch] max_tokens 161515 is provided. Allowed quota from max_tokens is 11.67405781056732GiB. New quota is 11.077782439999282GiB
+[11/25/2026-06:01:11] [TRT-LLM] [I] [_torch] KV cache manager v2 device quota set to 11.077782439999282GiB
+[TRT-LLM] [W] [batchmgr][RANK 0] PooledPhysMemAllocator: device 0 refused gpuDirectRDMACapable for KV cache memory with handle type 1, so the pools are allocated without it. nvidia_peermem (ibv_reg_mr) cannot register this memory for GPUDirect RDMA; dma-buf registration still can.
+[11/25/2026-06:01:11] [TRT-LLM] [I] [_torch] KVCacheManagerV2: IndexMapper capacity=4097 (max_num_sequences=2048, is_disagg=False, disable_overlap_scheduler=False, pp_size=1, num_reserved_index_slots=1, max_beam_width=1, max_copy_beam_width=1)
+[11/25/2026-06:01:11] [TRT-LLM] [I] [_torch] KVCacheManagerV2 role-to-pool/lifecycle mapping:
+[11/25/2026-06:01:11] [TRT-LLM] [I] [_torch] role=key, pool_group_id=0, layer_group_id=0
+[11/25/2026-06:01:11] [TRT-LLM] [I] [_torch] role=value, pool_group_id=0, layer_group_id=0
+[11/25/2026-06:01:11] [TRT-LLM] [I] [_startup] [startup][pid=162] executor_creation/final_kv_cache_allocation: done in 0.028s
+[11/25/2026-06:01:11] [TRT-LLM] [I] [_startup] [startup][pid=162] executor_creation/final_executor_creation: start
+[11/25/2026-06:01:11] [TRT-LLM] [I] [_torch] max_seq_len=4096, max_num_requests=4096, max_num_tokens=8192, max_batch_size=2048
+[11/25/2026-06:01:11] [TRT-LLM] [W] [_torch] KVCacheV2Scheduler only supports MAX_UTILIZATION for now, got GUARANTEED_NO_EVICT, setting to MAX_UTILIZATION
+[11/25/2026-06:01:11] [TRT-LLM] [I] [_torch] KVCacheV2Scheduler: tokens_per_block=32, max_num_tokens=8192, max_batch_size=2048, draft_mgr=None, cross_mgr=None, enable_prefix_aware_scheduling=True, prefix_skip_enabled=False, enable_recompute_pause=True
+[11/25/2026-06:01:11] [TRT-LLM] [I] [_torch] cache_transceiver is disabled
+[11/25/2026-06:01:11] [TRT-LLM] [I] [_torch] [PyExecutor] execution_stream initialized: <torch.cuda.Stream device=cuda:0 cuda_stream=0x569d4a80>; encoder_stream initialized: <torch.cuda.Stream device=cuda:0 cuda_stream=0x569ec030>.
+[11/25/2026-06:01:12] [TRT-LLM] [I] [_startup] [startup][pid=162] pre_warmup_rank_barrier: start
+[11/25/2026-06:01:12] [TRT-LLM] [I] [_startup] [startup][pid=162] pre_warmup_rank_barrier: done, total=0.000s, unattributed=0.000s | 
+[11/25/2026-06:01:12] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=final_executor][pass=2] sampling_module_prewarm: start
+[11/25/2026-06:01:12] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=final_executor][pass=2] sampling_module_prewarm: done in 0.0s
+[11/25/2026-06:01:12] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=final_executor][pass=2] cute_dsl_indexer_q: start
+[11/25/2026-06:01:12] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=final_executor][pass=2] cute_dsl_indexer_q: done in 0.0s
+[11/25/2026-06:01:12] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=final_executor][pass=2] attention_jit: start
+[11/25/2026-06:01:12] [TRT-LLM] [I] [_torch] Running TRTLLM-Gen FMHA JIT warmup
+[11/25/2026-06:01:12] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=final_executor][pass=2] attention shape num_tokens=1, num_gen_requests=1: start
+[TRT-LLM] [W] [thop][RANK 0] Attention workspace size is not enough, increase the size from 0 bytes to 26189824 bytes
+[11/25/2026-06:01:12] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=final_executor][pass=2] attention shape num_tokens=1, num_gen_requests=1: done in 0.0s
+[11/25/2026-06:01:12] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=final_executor][pass=2] attention shape num_tokens=1, num_gen_requests=0: start
+[TRT-LLM] [W] [thop][RANK 0] Attention workspace size is not enough, increase the size from 26189824 bytes to 33555712 bytes
+[11/25/2026-06:01:12] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=final_executor][pass=2] attention shape num_tokens=1, num_gen_requests=0: done in 0.0s
+[11/25/2026-06:01:12] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=final_executor][pass=2] attention shape num_tokens=2, num_gen_requests=1: start
+[11/25/2026-06:01:12] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=final_executor][pass=2] attention shape num_tokens=2, num_gen_requests=1: done in 0.0s
+[11/25/2026-06:01:12] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=final_executor][pass=2] attention_jit: done in 0.1s
+[11/25/2026-06:01:12] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=final_executor][pass=2] general: start
+[11/25/2026-06:01:12] [TRT-LLM] [I] [_torch] Run warmup with 1 tokens, include 0 generation tokens
+[11/25/2026-06:01:12] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=final_executor][pass=2] general shape num_tokens=1, num_gen_tokens=0: done in 0.0s
+[11/25/2026-06:01:12] [TRT-LLM] [I] [_torch] Run warmup with 1 tokens, include 1 generation tokens
+[11/25/2026-06:01:12] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=final_executor][pass=2] general shape num_tokens=1, num_gen_tokens=1: done in 0.0s
+[11/25/2026-06:01:12] [TRT-LLM] [I] [_torch] Run warmup with 8192 tokens, include 0 generation tokens
+[TRT-LLM] [W] [thop][RANK 0] Attention workspace size is not enough, increase the size from 33555712 bytes to 33620992 bytes
+[11/25/2026-06:01:12] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=final_executor][pass=2] general shape num_tokens=8192, num_gen_tokens=0: done in 0.9s
+[11/25/2026-06:01:13] [TRT-LLM] [I] [_torch] Run warmup with 2048 tokens, include 2048 generation tokens
+[TRT-LLM] [W] [thop][RANK 0] Attention workspace size is not enough, increase the size from 33620992 bytes to 103284736 bytes
+[11/25/2026-06:01:13] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=final_executor][pass=2] general shape num_tokens=2048, num_gen_tokens=2048: done in 0.2s
+[11/25/2026-06:01:13] [TRT-LLM] [I] [_torch] Run warmup with 2 tokens, include 0 generation tokens
+[11/25/2026-06:01:13] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=final_executor][pass=2] general shape num_tokens=2, num_gen_tokens=0: done in 0.0s
+[11/25/2026-06:01:13] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=final_executor][pass=2] general: done in 1.5s
+[11/25/2026-06:01:13] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=final_executor][pass=2] autotuner: start
+[11/25/2026-06:01:13] [TRT-LLM] [I] [_torch] Skipping duplicate autotuner warmup for already completed num_tokens=8192
+[11/25/2026-06:01:13] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=final_executor][pass=2] autotuner: done in 0.0s
+[11/25/2026-06:01:13] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=final_executor][pass=2] mamba_hybrid: start
+[11/25/2026-06:01:13] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=final_executor][pass=2] mamba_hybrid: done in 0.0s
+[11/25/2026-06:01:13] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=final_executor][pass=2] cuda_graph_capture: start
+[11/25/2026-06:01:13] [TRT-LLM] [I] [_torch] Running CUDA graph warmup for 19 batch sizes.
+[11/25/2026-06:01:13] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=128, draft_len=0, max_seq_len=4096
+[TRT-LLM] [W] [thop][RANK 0] Attention workspace size is not enough, increase the size from 0 bytes to 30478336 bytes
+[11/25/2026-06:01:13] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=120, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:13] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=112, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:13] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=104, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:13] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=96, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:13] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=88, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:13] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=80, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:13] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=72, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:13] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=64, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:14] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=56, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:14] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=48, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:14] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=40, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:14] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=32, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:14] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=24, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:14] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=16, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:14] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=8, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:14] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=4, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:14] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=2, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:14] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph warmup (full) for batch size=1, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:14] [TRT-LLM] [I] [_torch] Running CUDA graph capture for 19 batch sizes.
+[11/25/2026-06:01:14] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=128, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:14] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=120, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:14] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=112, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:14] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=104, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:14] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=96, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:14] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=88, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:14] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=80, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:14] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=72, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:14] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=64, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:14] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=56, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:14] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=48, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:14] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=40, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:15] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=32, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:15] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=24, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:15] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=16, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:15] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=8, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:15] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=4, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:15] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=2, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:15] [TRT-LLM] [I] [_torch] Run generation-only CUDA graph capture (full) for batch size=1, draft_len=0, max_seq_len=4096
+[11/25/2026-06:01:15] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=final_executor][pass=2] cuda_graph_capture: done in 1.6s
+[11/25/2026-06:01:15] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=final_executor][pass=2] dsa_prewarm: start
+[11/25/2026-06:01:15] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=final_executor][pass=2] dsa_prewarm: done in 0.0s
+[11/25/2026-06:01:15] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=final_executor][pass=2] memory_pool_prepop: start
+[11/25/2026-06:01:15] [TRT-LLM] [I] [_torch] Run warmup with 8192 tokens, include 0 generation tokens
+[11/25/2026-06:01:16] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=final_executor][pass=2] general shape num_tokens=8192, num_gen_tokens=0: done in 0.9s
+[11/25/2026-06:01:16] [TRT-LLM] [I] [_torch] Run warmup with 2048 tokens, include 2048 generation tokens
+[11/25/2026-06:01:16] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=final_executor][pass=2] general shape num_tokens=2048, num_gen_tokens=2048: done in 0.2s
+[11/25/2026-06:01:16] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=final_executor][pass=2] memory_pool_prepop: done in 1.2s
+[11/25/2026-06:01:16] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=final_executor][pass=2] preallocate_padding_dummies: start
+[11/25/2026-06:01:16] [TRT-LLM] [I] [_torch] Pre-allocated the CUDA graph padding dummy request (draft_len=0) at warmup.
+[11/25/2026-06:01:16] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=final_executor][pass=2] preallocate_padding_dummies: done in 0.0s
+[11/25/2026-06:01:16] [TRT-LLM] [I] [_torch] [warmup][pid=162][rank=0][purpose=final_executor][pass=2] summary: total=4.5s | sampling_module_prewarm=0.0s (0%), cute_dsl_indexer_q=0.0s (0%), attention_jit=0.1s (1%), general=1.5s (32%), autotuner=0.0s (0%), mamba_hybrid=0.0s (0%), cuda_graph_capture=1.6s (35%), dsa_prewarm=0.0s (0%), memory_pool_prepop=1.2s (26%), preallocate_padding_dummies=0.0s (0%)
+[11/25/2026-06:01:16] [TRT-LLM] [W] [_torch] `torch.isnan` or `torch.isinf` is not implemented for current kv cache dtype, related checks are skipped
+[11/25/2026-06:01:16] [TRT-LLM] [I] [_torch] global_steady_clock_offset already set (0:00:00); skipping recalibration for rank 0
+[11/25/2026-06:01:16] [TRT-LLM] [I] [_startup] [startup][pid=162] executor_creation/final_executor_creation: done in 4.803s
+[11/25/2026-06:01:16] [TRT-LLM] [I] [_torch] Setting PyTorch memory fraction to 0.46778138387641177 (10.9964599609375 GiB)
+[11/25/2026-06:01:16] [TRT-LLM] [I] [_torch] LLM Args:
+model='/models/hub/models--nvidia--Qwen3-8B-NVFP4/snapshots/ccd10a893cbca613259517c3efe08e151ddf2b8e' tokenizer=None tokenizer_mode='auto' custom_tokenizer=None post_processor_hook=None skip_tokenizer_init=False trust_remote_code=False tensor_parallel_size=1 dtype='auto' revision=None tokenizer_revision=None model_kwargs=None pipeline_parallel_size=1 context_parallel_size=1 gpus_per_node=1 moe_cluster_parallel_size=-1 moe_tensor_parallel_size=-1 moe_expert_parallel_size=-1 enable_attention_dp=False enable_lm_head_tp_in_adp=False pp_partition=None cp_config=None load_format=<LoadFormat.AUTO: 0> enable_lora=False lora_config=None kv_cache_config=KvCacheConfig(enable_block_reuse=False, max_tokens=161515, max_attention_window=None, sink_token_length=None, free_gpu_memory_fraction=0.9, host_cache_size=0, disk_cache_size=None, disk_cache_path=None, cross_kv_cache_fraction=None, cold_tier_offload_min_priority=None, secondary_offload_min_priority=None, event_buffer_max_size=0, attention_dp_events_gather_period_ms=5, kv_events_config=None, enable_partial_reuse=True, copy_on_partial_reuse=True, use_uvm=False, max_gpu_total_bytes=11894678323, iteration_stats_interval=1, dtype='fp8', mixed_precision_first_n=256, mixed_precision_last_n=256, mamba_ssm_cache_dtype='auto', mamba_ssm_stochastic_rounding=False, mamba_ssm_philox_rounds=10, tokens_per_block=32, mamba_state_cache_interval=None, mamba_state_config=MambaStateConfig(periodic_snapshot_interval=0, additional_snapshot_offsets_from_start=[], additional_snapshot_offsets_from_end=[], enable_branch_snapshot=False), use_kv_cache_manager_v2=True, enable_swa_scratch_reuse=False, kv_cache_event_hash_algo='auto', max_util_for_resume=0.95, enable_kv_pool_rebalance=False, kv_pool_rebalance_config=KvPoolRebalanceConfig(min_sampled_kv_caches=2000, cooldown_secs=120.0, target_ratio_update_interval=100, ratio_tolerance=0.25, moving_average_decay=0.9999, check_interval=10), disk_prefetch_num_reqs=0, fp8_context_mla_kv_len_cap=None, pool_ratio=None, avg_seq_len=None, block_reuse_config=BlockReuseConfig(policy='all_reusable', max_num_turns=1, swa_endpoint_rewind_tokens=0, enable_branch_snapshot=False)) enable_chunked_prefill=False guided_decoding_backend=None batched_logits_processor=None iter_stats_max_iterations=None request_stats_max_iterations=None peft_cache_config=None scheduler_config=SchedulerConfig(capacity_scheduler_policy=<CapacitySchedulerPolicy.GUARANTEED_NO_EVICT: 'GUARANTEED_NO_EVICT'>, context_chunking_policy=None, dynamic_batch_config=None, waiting_queue_policy=<WaitingQueuePolicy.FCFS: 'fcfs'>, use_python_scheduler=False, enable_prefix_aware_scheduling=True) cache_transceiver_config=None sparse_attention_config=None kv_cache_compression_config=None speculative_config=None max_batch_size=2048 max_input_len=1024 max_seq_len=4096 max_beam_width=1 max_num_tokens=8192 gather_generation_logits=False num_postprocess_workers=0 postprocess_tokenizer_dir='/models/hub/models--nvidia--Qwen3-8B-NVFP4/snapshots/ccd10a893cbca613259517c3efe08e151ddf2b8e' num_serve_frontends=1 reasoning_parser=None decoding_config=None mpi_session=None otlp_traces_endpoint=None backend='pytorch' return_perf_metrics=False per_request_spec_decode_stats=False perf_metrics_output_dir=None perf_metrics_max_requests=0 prometheus_metrics_config=None enable_energy_metrics=False orchestrator_type=None env_overrides=None telemetry_config=TelemetryConfig(disabled=False, usage_context=<UsageContext.CLI_SERVE: 'cli_serve'>) generation_config='trtllm' garbage_collection_gen0_threshold=20000 cuda_graph_config=DecodeCudaGraphConfig(batch_sizes=[1, 2, 4, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104, 112, 120, 128], max_batch_size=128, enable_padding=True, mode='decode') encoder_cuda_graph_config=None enable_encoder_decoder_mixed_cuda_graph=True multimodal_config=MultimodalConfig(encoder_cuda_graph=None, encoder_side_stream_max_ahead=0, encoder_cache_max_bytes=134217728, encoder_scheduling_policy=<MultimodalEncoderSchedulingPolicy.DEFAULT: 'DEFAULT'>, video_pruning_rate=None) attention_dp_config=None disable_overlap_scheduler=False enable_return_routed_experts=False lm_head_output_dtype='auto' moe_config=MoeConfig(backend='AUTO', max_num_tokens=None, load_balancer=None, disable_finalize_fusion=False, use_low_precision_moe_combine=False) nvfp4_gemm_config=Nvfp4GemmConfig(allowed_backends=['marlin']) dwdp_config=None encoder_max_batch_size=None encoder_max_num_tokens=None attn_backend='TRTLLM' enable_mla_skip_correction=False mla_skip_correction_threshold=8.0 sampler_force_async_worker=False enable_in_graph_sampling=False enable_speculative_beam_history_d2h=False enable_early_first_token_response=False enable_low_latency_host_dispatch=False enable_iter_perf_stats=False enable_tokenization_cache=False enable_iter_req_stats=False iter_perf_stats_interval=1 print_iter_log=False batch_wait_timeout_ms=0 batch_wait_timeout_iters=0 batch_wait_max_tokens_ratio=0 bounded_replay_on_generation=False torch_compile_config=None prefill_cuda_graph_backend=<PrefillCudaGraphBackend.DISABLED: 'disabled'> prefill_capture_num_tokens=None enable_autotuner=True use_fine_grained_sync=False enable_layerwise_nvtx_marker=False enable_min_latency=False stream_interval=1 force_dynamic_quantization=False allreduce_strategy='AUTO' checkpoint_loader=None checkpoint_format='HF' checkpoint_io_policy='auto' mx_config=ModelExpressConfig(server_url=None, server_query_timeout_s=None, preshard_strategy='per_module') gms_config=GmsConfig(socket_path=None, mode='auto', tag='weights') kv_connector_config=None mm_encoder_only=False disable_mm_encoder=False encode_only=False ray_worker_extension_cls=None ray_placement_config=None ray_worker_nsight_options=None sleep_config=None reorder_policy_config=None enable_resource_governor=False use_cute_dsl_blockscaling_mm=False use_cute_dsl_blockscaling_bmm=False enable_locality_domains=False use_cute_dsl_bf16_bmm=False use_cute_dsl_bf16_gemm=False max_stats_len=1000 layer_wise_benchmarks_config=LayerwiseBenchmarksConfig(calibration_mode='NONE', calibration_file_path=None, calibration_layer_indices=None) modeling_v2='off'
+[11/25/2026-06:01:16] [TRT-LLM] [I] [_startup] [startup][pid=162] executor_creation/executor_start_worker: start
+[11/25/2026-06:01:16] [TRT-LLM] [I] [_startup] [startup][pid=162] executor_creation/executor_start_worker: done in 0.000s
+[11/25/2026-06:01:16] [TRT-LLM] [I] [_startup] [startup][pid=162] executor_creation: done, total=106.549s, unattributed=0.003s | configuration_and_distributed_init=0.023s, model=10.142s, sampler=0.007s, profiling_kv_cache_allocation=0.022s, spec_resource_manager=0.000s, drafter=0.000s, profiling_executor_creation=90.266s, memory_profiling_and_capacity=1.013s, profiling_resource_teardown=0.244s, final_kv_cache_allocation=0.028s, final_executor_creation=4.803s, executor_start_worker=0.000s
+[11/25/2026-06:01:16] [TRT-LLM] [I] [executor] RPCServer is bound to ipc:///tmp/rpc_test_925011bf-17e7-4622-b3ac-480e3f794319
+[11/25/2026-06:01:16] [TRT-LLM] [I] [executor] RPC Server started and listening on ipc:///tmp/rpc_test_925011bf-17e7-4622-b3ac-480e3f794319
+[11/25/2026-06:01:16] [TRT-LLM] [I] [executor] RPC Server has started.
+[11/25/2026-06:01:16] [TRT-LLM] [I] [executor] get signal from executor worker
+[11/25/2026-06:01:16] [TRT-LLM] [I] [_startup] [startup][pid=79] worker_submit_to_ready/worker_initialization_wait: done in 118.021s
+[11/25/2026-06:01:16] [TRT-LLM] [I] [_startup] [startup][pid=79] worker_submit_to_ready: done, total=118.022s, unattributed=0.000s | worker_submit=0.000s, worker_initialization_wait=118.021s
+[11/25/2026-06:01:16] [TRT-LLM] [I] [executor] [startup][pid=79] executor_proxy/workers_ready: elapsed=118.123s
+[11/25/2026-06:01:17] [TRT-LLM] [W] [serve] Resource governor is disabled: the executor backend does not provide a resource_governor_queue (e.g. RPC orchestrator mode or explicit opt-out). Endpoints under /_resource_governor/ will not be available.
+INFO:     Started server process [79]
+INFO:     Waiting for application startup.
+[11/25/2026-06:01:17] [TRT-LLM] [I] [_startup] [startup][pid=79] http_server_start: start
+INFO:     Application startup complete.
+[11/25/2026-06:01:17] [TRT-LLM] [I] [_startup] [startup][pid=79] http_server_start: done, total=0.100s, unattributed=0.100s | 
+INFO:     172.17.0.1:36530 - "GET /health HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36536 - "GET /health HTTP/1.1" 200 OK
+INFO:     172.17.0.1:53716 - "POST /tokenize HTTP/1.1" 404 Not Found
+INFO:     172.17.0.1:53728 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:53728 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:53728 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:53728 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:53728 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:40280 - "POST /tokenize HTTP/1.1" 404 Not Found
+INFO:     172.17.0.1:40286 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:40286 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:40286 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:40286 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:40286 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:40286 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:40286 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:40286 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:52516 - "POST /tokenize HTTP/1.1" 404 Not Found
+INFO:     172.17.0.1:52524 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:52524 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:52524 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:52524 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:52524 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:60692 - "POST /tokenize HTTP/1.1" 404 Not Found
+INFO:     172.17.0.1:60706 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:60706 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:60706 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:60706 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:60706 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:60706 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:59002 - "POST /tokenize HTTP/1.1" 404 Not Found
+INFO:     172.17.0.1:59012 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:59012 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:59012 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:59012 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:59012 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51084 - "POST /tokenize HTTP/1.1" 404 Not Found
+INFO:     172.17.0.1:51092 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51092 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51092 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51092 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51092 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51092 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:60118 - "POST /tokenize HTTP/1.1" 404 Not Found
+INFO:     172.17.0.1:60128 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:60128 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:60128 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:60136 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:60128 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:60136 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51154 - "POST /tokenize HTTP/1.1" 404 Not Found
+INFO:     172.17.0.1:51160 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51160 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51160 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51174 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51160 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51174 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51160 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51174 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42438 - "POST /tokenize HTTP/1.1" 404 Not Found
+INFO:     172.17.0.1:42444 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42444 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42446 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42444 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42446 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42444 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56110 - "POST /tokenize HTTP/1.1" 404 Not Found
+INFO:     172.17.0.1:56124 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56124 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56124 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56126 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56124 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56126 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56124 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56126 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:44006 - "POST /tokenize HTTP/1.1" 404 Not Found
+INFO:     172.17.0.1:44020 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:44020 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:44020 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:44028 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:44032 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:44038 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:44020 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:44032 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:53218 - "POST /tokenize HTTP/1.1" 404 Not Found
+INFO:     172.17.0.1:53232 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:53232 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:53232 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:53236 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:53244 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:53254 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:53232 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:53254 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:53236 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:53244 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:53232 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:53254 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56016 - "POST /tokenize HTTP/1.1" 404 Not Found
+INFO:     172.17.0.1:56022 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56022 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56036 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56022 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56038 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56044 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56036 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56038 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:39762 - "POST /tokenize HTTP/1.1" 404 Not Found
+INFO:     172.17.0.1:39764 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:39764 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:39774 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:39764 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:39772 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:39780 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:39774 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:39764 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:39780 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:39772 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     172.17.0.1:39774 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     172.17.0.1:39764 - "GET /metrics HTTP/1.1" 200 OK

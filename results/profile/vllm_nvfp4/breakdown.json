@@ -1,0 +1,456 @@
+{
+ "c1_in128": {
+  "input": 128,
+  "output": 64,
+  "prompts": 4,
+  "concurrency": 1,
+  "client_tpot_ms": 7.099274582865219,
+  "client_ttft_ms": 22.166273556649685,
+  "decode": {
+   "wall_ms": 7.0959,
+   "kernel_ms": 7.0358205,
+   "parts": {
+    "linear": 6.1400495,
+    "attention": 0.413374,
+    "other": 0.223806,
+    "norm": 0.134112,
+    "sampling": 0.08416,
+    "activation": 0.039776
+   },
+   "kernels": [
+    {
+     "name": "marlin::Marlin",
+     "part": "linear",
+     "runs": 72.0,
+     "ms": 3.162496
+    },
+    {
+     "name": "marlin::Marlin",
+     "part": "linear",
+     "runs": 72.0,
+     "ms": 1.6787605
+    },
+    {
+     "name": "internal::gemvx::kernel",
+     "part": "linear",
+     "runs": 1.0,
+     "ms": 1.299129
+    },
+    {
+     "name": "flashinfer::BatchPrefillWithPagedKVCacheKernel",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 0.3055025
+    },
+    {
+     "name": "vllm::reshape_and_cache_flash_kernel",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 0.107967
+    },
+    {
+     "name": "triton_red_fused_3",
+     "part": "other",
+     "runs": 35.0,
+     "ms": 0.1056
+    },
+    {
+     "name": "flashinfer::PersistentVariableLengthMergeStatesKernel",
+     "part": "other",
+     "runs": 36.0,
+     "ms": 0.070688
+    },
+    {
+     "name": "triton_red_fused_fused_add_rms_norm_2",
+     "part": "norm",
+     "runs": 36.0,
+     "ms": 0.069184
+    },
+    {
+     "name": "triton_red_fused_fused_add_rms_norm_0",
+     "part": "norm",
+     "runs": 36.0,
+     "ms": 0.0621435
+    },
+    {
+     "name": "at::native::cunn_SoftMaxForward",
+     "part": "sampling",
+     "runs": 1.0,
+     "ms": 0.050208
+    },
+    {
+     "name": "triton_poi_fused_mul_silu_slice_1",
+     "part": "activation",
+     "runs": 36.0,
+     "ms": 0.039776
+    },
+    {
+     "name": "flashinfer::sampling::RadixTopKMaskLogitsKernel_MultiCTA",
+     "part": "sampling",
+     "runs": 1.0,
+     "ms": 0.01952
+    }
+   ]
+  },
+  "prefill": {
+   "wall_ms": 21.597283,
+   "kernel_ms": 15.3271835,
+   "parts": {
+    "linear": 14.1688865,
+    "attention": 0.6002695,
+    "norm": 0.193711,
+    "other": 0.1775665,
+    "activation": 0.1171345,
+    "sampling": 0.06968
+   },
+   "kernels": [
+    {
+     "name": "marlin::Marlin",
+     "part": "linear",
+     "runs": 72.0,
+     "ms": 8.05993
+    },
+    {
+     "name": "marlin::Marlin",
+     "part": "linear",
+     "runs": 72.0,
+     "ms": 4.808867
+    },
+    {
+     "name": "internal::gemvx::kernel",
+     "part": "linear",
+     "runs": 1.0,
+     "ms": 1.3000895
+    },
+    {
+     "name": "flashinfer::BatchPrefillWithPagedKVCacheKernel",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 0.473326
+    },
+    {
+     "name": "vllm::reshape_and_cache_flash_kernel",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 0.1273435
+    },
+    {
+     "name": "triton_poi_fused_mul_silu_slice_1",
+     "part": "activation",
+     "runs": 36.0,
+     "ms": 0.1171345
+    },
+    {
+     "name": "triton_red_fused_3",
+     "part": "other",
+     "runs": 35.0,
+     "ms": 0.1159995
+    },
+    {
+     "name": "triton_red_fused_fused_add_rms_norm_2",
+     "part": "norm",
+     "runs": 36.0,
+     "ms": 0.099152
+    },
+    {
+     "name": "triton_red_fused_fused_add_rms_norm_0",
+     "part": "norm",
+     "runs": 36.0,
+     "ms": 0.091407
+    },
+    {
+     "name": "at::native::cunn_SoftMaxForward",
+     "part": "sampling",
+     "runs": 1.0,
+     "ms": 0.050208
+    },
+    {
+     "name": "flashinfer::sampling::RadixTopKMaskLogitsKernel_MultiCTA",
+     "part": "sampling",
+     "runs": 1.0,
+     "ms": 0.019584
+    },
+    {
+     "name": "_apply_write_kernel",
+     "part": "other",
+     "runs": 4.0,
+     "ms": 0.012048
+    }
+   ]
+  }
+ },
+ "c1_in2048": {
+  "input": 2048,
+  "output": 64,
+  "prompts": 2,
+  "concurrency": 1,
+  "client_tpot_ms": 7.255204565202197,
+  "client_ttft_ms": 219.0485275350511,
+  "decode": {
+   "wall_ms": 7.276381,
+   "kernel_ms": 7.218636,
+   "parts": {
+    "linear": 6.1799865,
+    "attention": 0.539326,
+    "other": 0.2352155,
+    "norm": 0.134431,
+    "sampling": 0.088143,
+    "activation": 0.039807
+   },
+   "kernels": [
+    {
+     "name": "marlin::Marlin",
+     "part": "linear",
+     "runs": 72.0,
+     "ms": 3.1892165
+    },
+    {
+     "name": "marlin::Marlin",
+     "part": "linear",
+     "runs": 72.0,
+     "ms": 1.691944
+    },
+    {
+     "name": "internal::gemvx::kernel",
+     "part": "linear",
+     "runs": 1.0,
+     "ms": 1.299226
+    },
+    {
+     "name": "flashinfer::BatchPrefillWithPagedKVCacheKernel",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 0.431294
+    },
+    {
+     "name": "vllm::reshape_and_cache_flash_kernel",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 0.1079835
+    },
+    {
+     "name": "triton_red_fused_3",
+     "part": "other",
+     "runs": 35.0,
+     "ms": 0.1058075
+    },
+    {
+     "name": "flashinfer::PersistentVariableLengthMergeStatesKernel",
+     "part": "other",
+     "runs": 36.0,
+     "ms": 0.08195
+    },
+    {
+     "name": "triton_red_fused_fused_add_rms_norm_2",
+     "part": "norm",
+     "runs": 36.0,
+     "ms": 0.069312
+    },
+    {
+     "name": "triton_red_fused_fused_add_rms_norm_0",
+     "part": "norm",
+     "runs": 36.0,
+     "ms": 0.062304
+    },
+    {
+     "name": "at::native::cunn_SoftMaxForward",
+     "part": "sampling",
+     "runs": 1.0,
+     "ms": 0.050143
+    },
+    {
+     "name": "triton_poi_fused_mul_silu_slice_1",
+     "part": "activation",
+     "runs": 36.0,
+     "ms": 0.039807
+    },
+    {
+     "name": "flashinfer::sampling::RadixTopKMaskLogitsKernel_MultiCTA",
+     "part": "sampling",
+     "runs": 1.0,
+     "ms": 0.019488
+    }
+   ]
+  },
+  "prefill": {
+   "wall_ms": 213.250678,
+   "kernel_ms": 206.226536,
+   "parts": {
+    "linear": 183.3403255,
+    "attention": 13.2514085,
+    "activation": 4.981722,
+    "norm": 3.6992145,
+    "other": 0.8828895,
+    "sampling": 0.070976
+   },
+   "kernels": [
+    {
+     "name": "marlin::Marlin",
+     "part": "linear",
+     "runs": 216.0,
+     "ms": 182.0415635
+    },
+    {
+     "name": "flashinfer::BatchPrefillWithPagedKVCacheKernel",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 12.670579
+    },
+    {
+     "name": "triton_poi_fused_mul_silu_slice_1",
+     "part": "activation",
+     "runs": 36.0,
+     "ms": 4.981722
+    },
+    {
+     "name": "triton_red_fused_fused_add_rms_norm_2",
+     "part": "norm",
+     "runs": 36.0,
+     "ms": 2.3768535
+    },
+    {
+     "name": "triton_red_fused_fused_add_rms_norm_0",
+     "part": "norm",
+     "runs": 36.0,
+     "ms": 1.299849
+    },
+    {
+     "name": "internal::gemvx::kernel",
+     "part": "linear",
+     "runs": 1.0,
+     "ms": 1.298762
+    },
+    {
+     "name": "triton_red_fused_3",
+     "part": "other",
+     "runs": 35.0,
+     "ms": 0.800842
+    },
+    {
+     "name": "vllm::reshape_and_cache_flash_kernel",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 0.5808295
+    },
+    {
+     "name": "at::native::cunn_SoftMaxForward",
+     "part": "sampling",
+     "runs": 1.0,
+     "ms": 0.05136
+    },
+    {
+     "name": "triton_red_fused__to_copy_embedding_rms_norm_0",
+     "part": "norm",
+     "runs": 1.0,
+     "ms": 0.022512
+    },
+    {
+     "name": "triton_red_fused_1",
+     "part": "other",
+     "runs": 1.0,
+     "ms": 0.022432
+    },
+    {
+     "name": "flashinfer::sampling::RadixTopKMaskLogitsKernel_MultiCTA",
+     "part": "sampling",
+     "runs": 1.0,
+     "ms": 0.019616
+    }
+   ]
+  }
+ },
+ "c4_in128": {
+  "input": 128,
+  "output": 64,
+  "prompts": 8,
+  "concurrency": 4,
+  "client_tpot_ms": 7.182732516426652,
+  "client_ttft_ms": 60.680292546749115,
+  "decode": {
+   "wall_ms": 7.180959,
+   "kernel_ms": 7.122943,
+   "parts": {
+    "linear": 6.184642,
+    "attention": 0.432014,
+    "other": 0.230432,
+    "norm": 0.1330555,
+    "sampling": 0.1017265,
+    "activation": 0.0410545
+   },
+   "kernels": [
+    {
+     "name": "marlin::Marlin",
+     "part": "linear",
+     "runs": 72.0,
+     "ms": 3.1940645
+    },
+    {
+     "name": "marlin::Marlin",
+     "part": "linear",
+     "runs": 72.0,
+     "ms": 1.679448
+    },
+    {
+     "name": "cutlass::Kernel2",
+     "part": "linear",
+     "runs": 1.0,
+     "ms": 1.311162
+    },
+    {
+     "name": "flashinfer::BatchPrefillWithPagedKVCacheKernel",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 0.3270065
+    },
+    {
+     "name": "triton_red_fused_3",
+     "part": "other",
+     "runs": 35.0,
+     "ms": 0.110752
+    },
+    {
+     "name": "vllm::reshape_and_cache_flash_kernel",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 0.104832
+    },
+    {
+     "name": "flashinfer::PersistentVariableLengthMergeStatesKernel",
+     "part": "other",
+     "runs": 36.0,
+     "ms": 0.071392
+    },
+    {
+     "name": "triton_red_fused_fused_add_rms_norm_2",
+     "part": "norm",
+     "runs": 36.0,
+     "ms": 0.068512
+    },
+    {
+     "name": "triton_red_fused_fused_add_rms_norm_0",
+     "part": "norm",
+     "runs": 36.0,
+     "ms": 0.06192
+    },
+    {
+     "name": "at::native::cunn_SoftMaxForward",
+     "part": "sampling",
+     "runs": 1.0,
+     "ms": 0.050208
+    },
+    {
+     "name": "triton_poi_fused_mul_silu_slice_1",
+     "part": "activation",
+     "runs": 36.0,
+     "ms": 0.0410545
+    },
+    {
+     "name": "flashinfer::sampling::TopPSamplingFromProbKernel",
+     "part": "sampling",
+     "runs": 1.0,
+     "ms": 0.03176
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,472 @@
+{
+ "c1_in3900": {
+  "input": 3900,
+  "output": 64,
+  "prompts": 2,
+  "concurrency": 1,
+  "client_tpot_ms": 12.019064942640918,
+  "client_ttft_ms": 289.0019719488919,
+  "decode": {
+   "wall_ms": 12.028994,
+   "kernel_ms": 11.975345,
+   "parts": {
+    "linear": 10.7302625,
+    "attention": 0.7059185,
+    "other": 0.239038,
+    "norm": 0.1678235,
+    "sampling": 0.085984,
+    "activation": 0.047552
+   },
+   "kernels": [
+    {
+     "name": "cutlass::Kernel2",
+     "part": "linear",
+     "runs": 108.0,
+     "ms": 4.7129795
+    },
+    {
+     "name": "cutlass::Kernel2",
+     "part": "linear",
+     "runs": 36.0,
+     "ms": 4.661269
+    },
+    {
+     "name": "internal::gemvx::kernel",
+     "part": "linear",
+     "runs": 1.0,
+     "ms": 1.316877
+    },
+    {
+     "name": "flashinfer::BatchPrefillWithPagedKVCacheKernel",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 0.598975
+    },
+    {
+     "name": "vllm::reshape_and_cache_flash_kernel",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 0.1068475
+    },
+    {
+     "name": "triton_red_fused_4",
+     "part": "other",
+     "runs": 35.0,
+     "ms": 0.106688
+    },
+    {
+     "name": "triton_red_fused__to_copy_clamp_cutlass_scaled_mm_fused_add_rms_norm_m",
+     "part": "norm",
+     "runs": 35.0,
+     "ms": 0.092096
+    },
+    {
+     "name": "flashinfer::PersistentVariableLengthMergeStatesKernel",
+     "part": "other",
+     "runs": 36.0,
+     "ms": 0.0847835
+    },
+    {
+     "name": "triton_red_fused__to_copy_clamp_cutlass_scaled_mm_fused_add_rms_norm_m",
+     "part": "norm",
+     "runs": 36.0,
+     "ms": 0.070624
+    },
+    {
+     "name": "at::native::cunn_SoftMaxForward",
+     "part": "sampling",
+     "runs": 1.0,
+     "ms": 0.050079
+    },
+    {
+     "name": "triton_poi_fused__to_copy_clamp_cutlass_scaled_mm_mul_reciprocal_silu_",
+     "part": "activation",
+     "runs": 36.0,
+     "ms": 0.047552
+    },
+    {
+     "name": "triton_poi_fused__to_copy_clamp_cutlass_scaled_mm_mul_reciprocal_view_",
+     "part": "linear",
+     "runs": 36.0,
+     "ms": 0.038368
+    }
+   ]
+  }
+ },
+ "c2_in128": {
+  "input": 128,
+  "output": 64,
+  "prompts": 4,
+  "concurrency": 2,
+  "client_tpot_ms": 11.828151727390903,
+  "client_ttft_ms": 31.891157617792487,
+  "decode": {
+   "wall_ms": 11.751721,
+   "kernel_ms": 11.6961525,
+   "parts": {
+    "linear": 10.7385235,
+    "attention": 0.4158395,
+    "other": 0.228704,
+    "norm": 0.1664795,
+    "sampling": 0.099375,
+    "activation": 0.047423
+   },
+   "kernels": [
+    {
+     "name": "cutlass::Kernel2",
+     "part": "linear",
+     "runs": 108.0,
+     "ms": 4.725991
+    },
+    {
+     "name": "cutlass::Kernel2",
+     "part": "linear",
+     "runs": 36.0,
+     "ms": 4.6579905
+    },
+    {
+     "name": "cutlass::Kernel2",
+     "part": "linear",
+     "runs": 1.0,
+     "ms": 1.3156935
+    },
+    {
+     "name": "flashinfer::BatchPrefillWithPagedKVCacheKernel",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 0.3106075
+    },
+    {
+     "name": "triton_red_fused_4",
+     "part": "other",
+     "runs": 35.0,
+     "ms": 0.110272
+    },
+    {
+     "name": "vllm::reshape_and_cache_flash_kernel",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 0.105664
+    },
+    {
+     "name": "triton_red_fused__to_copy_clamp_cutlass_scaled_mm_fused_add_rms_norm_m",
+     "part": "norm",
+     "runs": 35.0,
+     "ms": 0.091424
+    },
+    {
+     "name": "flashinfer::PersistentVariableLengthMergeStatesKernel",
+     "part": "other",
+     "runs": 36.0,
+     "ms": 0.070944
+    },
+    {
+     "name": "triton_red_fused__to_copy_clamp_cutlass_scaled_mm_fused_add_rms_norm_m",
+     "part": "norm",
+     "runs": 36.0,
+     "ms": 0.07008
+    },
+    {
+     "name": "at::native::cunn_SoftMaxForward",
+     "part": "sampling",
+     "runs": 1.0,
+     "ms": 0.050272
+    },
+    {
+     "name": "triton_poi_fused__to_copy_clamp_cutlass_scaled_mm_mul_reciprocal_silu_",
+     "part": "activation",
+     "runs": 36.0,
+     "ms": 0.047423
+    },
+    {
+     "name": "triton_poi_fused__to_copy_clamp_cutlass_scaled_mm_mul_reciprocal_view_",
+     "part": "linear",
+     "runs": 36.0,
+     "ms": 0.038752
+    }
+   ]
+  }
+ },
+ "c4_in2048": {
+  "input": 2048,
+  "output": 64,
+  "prompts": 8,
+  "concurrency": 4,
+  "client_tpot_ms": 14.410146549048404,
+  "client_ttft_ms": 406.16171387955546,
+  "decode": {
+   "wall_ms": 12.513951,
+   "kernel_ms": 12.45816,
+   "parts": {
+    "linear": 10.761265,
+    "attention": 1.148637,
+    "other": 0.230239,
+    "norm": 0.163648,
+    "sampling": 0.101984,
+    "activation": 0.053056
+   },
+   "kernels": [
+    {
+     "name": "cutlass::Kernel2",
+     "part": "linear",
+     "runs": 108,
+     "ms": 4.730327
+    },
+    {
+     "name": "cutlass::Kernel2",
+     "part": "linear",
+     "runs": 36,
+     "ms": 4.671962
+    },
+    {
+     "name": "cutlass::Kernel2",
+     "part": "linear",
+     "runs": 1,
+     "ms": 1.320318
+    },
+    {
+     "name": "flashinfer::BatchPrefillWithPagedKVCacheKernel",
+     "part": "attention",
+     "runs": 36,
+     "ms": 1.044384
+    },
+    {
+     "name": "triton_red_fused_4",
+     "part": "other",
+     "runs": 35,
+     "ms": 0.110079
+    },
+    {
+     "name": "vllm::reshape_and_cache_flash_kernel",
+     "part": "attention",
+     "runs": 36,
+     "ms": 0.10368
+    },
+    {
+     "name": "triton_red_fused__to_copy_clamp_cutlass_scaled_mm_fused_add_rms_norm_m",
+     "part": "norm",
+     "runs": 35,
+     "ms": 0.089696
+    },
+    {
+     "name": "flashinfer::PersistentVariableLengthMergeStatesKernel",
+     "part": "other",
+     "runs": 36,
+     "ms": 0.07168
+    },
+    {
+     "name": "triton_red_fused__to_copy_clamp_cutlass_scaled_mm_fused_add_rms_norm_m",
+     "part": "norm",
+     "runs": 36,
+     "ms": 0.069152
+    },
+    {
+     "name": "triton_poi_fused__to_copy_clamp_cutlass_scaled_mm_mul_reciprocal_silu_",
+     "part": "activation",
+     "runs": 36,
+     "ms": 0.053056
+    },
+    {
+     "name": "at::native::cunn_SoftMaxForward",
+     "part": "sampling",
+     "runs": 1,
+     "ms": 0.050208
+    },
+    {
+     "name": "triton_poi_fused__to_copy_clamp_cutlass_scaled_mm_mul_reciprocal_view_",
+     "part": "linear",
+     "runs": 36,
+     "ms": 0.038112
+    }
+   ]
+  }
+ },
+ "c16_in128": {
+  "input": 128,
+  "output": 64,
+  "prompts": 32,
+  "concurrency": 16,
+  "client_tpot_ms": 12.722732957511667,
+  "client_ttft_ms": 114.11075689829886,
+  "decode": {
+   "wall_ms": 12.070295,
+   "kernel_ms": 12.012406,
+   "parts": {
+    "linear": 10.823479,
+    "attention": 0.595808,
+    "other": 0.259776,
+    "norm": 0.163807,
+    "sampling": 0.107232,
+    "activation": 0.057472
+   },
+   "kernels": [
+    {
+     "name": "cutlass::Kernel2",
+     "part": "linear",
+     "runs": 108,
+     "ms": 4.736443
+    },
+    {
+     "name": "cutlass::Kernel2",
+     "part": "linear",
+     "runs": 36,
+     "ms": 4.706364
+    },
+    {
+     "name": "cutlass::Kernel2",
+     "part": "linear",
+     "runs": 1,
+     "ms": 1.340255
+    },
+    {
+     "name": "flashinfer::BatchPrefillWithPagedKVCacheKernel",
+     "part": "attention",
+     "runs": 36,
+     "ms": 0.491776
+    },
+    {
+     "name": "triton_red_fused_4",
+     "part": "other",
+     "runs": 35,
+     "ms": 0.111455
+    },
+    {
+     "name": "vllm::reshape_and_cache_flash_kernel",
+     "part": "attention",
+     "runs": 36,
+     "ms": 0.10176
+    },
+    {
+     "name": "flashinfer::PersistentVariableLengthMergeStatesKernel",
+     "part": "other",
+     "runs": 36,
+     "ms": 0.090112
+    },
+    {
+     "name": "triton_red_fused__to_copy_clamp_cutlass_scaled_mm_fused_add_rms_norm_m",
+     "part": "norm",
+     "runs": 35,
+     "ms": 0.088863
+    },
+    {
+     "name": "triton_red_fused__to_copy_clamp_cutlass_scaled_mm_fused_add_rms_norm_m",
+     "part": "norm",
+     "runs": 36,
+     "ms": 0.070144
+    },
+    {
+     "name": "triton_poi_fused__to_copy_clamp_cutlass_scaled_mm_mul_reciprocal_silu_",
+     "part": "activation",
+     "runs": 36,
+     "ms": 0.057472
+    },
+    {
+     "name": "at::native::cunn_SoftMaxForward",
+     "part": "sampling",
+     "runs": 1,
+     "ms": 0.0504
+    },
+    {
+     "name": "triton_poi_fused__to_copy_clamp_cutlass_scaled_mm_mul_reciprocal_view_",
+     "part": "linear",
+     "runs": 36,
+     "ms": 0.039616
+    }
+   ]
+  }
+ },
+ "c64_in128": {
+  "input": 128,
+  "output": 64,
+  "prompts": 128,
+  "concurrency": 64,
+  "client_tpot_ms": 16.889108418827018,
+  "client_ttft_ms": 320.8437154535204,
+  "decode": {
+   "wall_ms": 14.188317,
+   "kernel_ms": 14.12027,
+   "parts": {
+    "linear": 11.9489565,
+    "attention": 1.3790715,
+    "other": 0.297119,
+    "sampling": 0.199024,
+    "norm": 0.1801915,
+    "activation": 0.100288
+   },
+   "kernels": [
+    {
+     "name": "cutlass::Kernel2",
+     "part": "linear",
+     "runs": 144.0,
+     "ms": 10.45891
+    },
+    {
+     "name": "cutlass::Kernel2",
+     "part": "linear",
+     "runs": 1.0,
+     "ms": 1.4458715
+    },
+    {
+     "name": "flashinfer::BatchPrefillWithPagedKVCacheKernel",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 1.2769275
+    },
+    {
+     "name": "triton_red_fused_4",
+     "part": "other",
+     "runs": 35.0,
+     "ms": 0.115168
+    },
+    {
+     "name": "vllm::reshape_and_cache_flash_kernel",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 0.102112
+    },
+    {
+     "name": "triton_poi_fused__to_copy_clamp_cutlass_scaled_mm_mul_reciprocal_silu_",
+     "part": "activation",
+     "runs": 36.0,
+     "ms": 0.100288
+    },
+    {
+     "name": "triton_red_fused__to_copy_clamp_cutlass_scaled_mm_fused_add_rms_norm_m",
+     "part": "norm",
+     "runs": 35.0,
+     "ms": 0.096512
+    },
+    {
+     "name": "flashinfer::sampling::RadixTopKMaskLogitsKernel_MultiCTA",
+     "part": "sampling",
+     "runs": 1.0,
+     "ms": 0.089568
+    },
+    {
+     "name": "flashinfer::PersistentVariableLengthMergeStatesKernel",
+     "part": "other",
+     "runs": 36.0,
+     "ms": 0.085456
+    },
+    {
+     "name": "triton_red_fused__to_copy_clamp_cutlass_scaled_mm_fused_add_rms_norm_m",
+     "part": "norm",
+     "runs": 36.0,
+     "ms": 0.078112
+    },
+    {
+     "name": "at::native::cunn_SoftMaxForward",
+     "part": "sampling",
+     "runs": 1.0,
+     "ms": 0.065664
+    },
+    {
+     "name": "flashinfer::sampling::TopPSamplingFromProbKernel",
+     "part": "sampling",
+     "runs": 1.0,
+     "ms": 0.04368
+    }
+   ]
+  }
+ }
+}

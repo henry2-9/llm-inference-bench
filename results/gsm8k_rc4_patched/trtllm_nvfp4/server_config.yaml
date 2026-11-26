@@ -1,0 +1,20 @@
+# trtllm-serve settings for nvidia/Qwen3-8B-NVFP4 (ModelOpt NVFP4 weights, block size 16, lm_head BF16; FP8 KV).
+# Same as trtllm_fp8.yaml except the KV size and the NVFP4 GEMM backend; see trtllm_bf16.yaml for the reasons.
+kv_cache_config:
+  # vLLM NVFP4 (--kv-cache-dtype fp8) gets 170,016 tokens = 11.68 GiB; times max_util_for_resume (0.95).
+  # TRT-LLM grants only 11.13 GiB (162k tokens) of that: its own cap, 0.9 x the memory left after startup
+  # profiling, is lower here because it holds 11.1 GiB outside the KV cache (vLLM: 8.8 GiB). The largest cell
+  # of the grid needs 147k tokens (64 x 2,304), so neither engine runs out of KV; raising the cap would leave
+  # under 1 GiB of the 24 GB free.
+  max_tokens: 161515
+  dtype: fp8
+  # Needed here for more than fairness: with block reuse on, 1.4.0rc2 picks the paged context FMHA kernel,
+  # which it does not have for this checkpoint on SM89 ("FMHA kernels are not found with these parameters").
+  enable_block_reuse: false
+  host_cache_size: 0
+cuda_graph_config:
+  enable_padding: true
+nvfp4_gemm_config:
+  # The RTX 4090 (SM89) has no FP4 tensor cores, and the default backend fails at startup ("Arch unsupported
+  # for CUTLASS FP4 GEMM"). Marlin runs NVFP4 weight-only (W4A16); vLLM uses its Marlin NVFP4 kernel here too.
+  allowed_backends: [marlin]

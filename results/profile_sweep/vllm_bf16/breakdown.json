@@ -1,0 +1,472 @@
+{
+ "c1_in3900": {
+  "input": 3900,
+  "output": 64,
+  "prompts": 2,
+  "concurrency": 1,
+  "client_tpot_ms": 17.948846547080883,
+  "client_ttft_ms": 430.4473055526614,
+  "decode": {
+   "wall_ms": 17.828329,
+   "kernel_ms": 17.7386005,
+   "parts": {
+    "linear": 16.228048,
+    "attention": 1.106916,
+    "other": 0.1510255,
+    "norm": 0.12829,
+    "sampling": 0.081809,
+    "activation": 0.040097
+   },
+   "kernels": [
+    {
+     "name": "internal::gemvx::kernel",
+     "part": "linear",
+     "runs": 108.0,
+     "ms": 13.550897
+    },
+    {
+     "name": "internal::gemvx::kernel",
+     "part": "linear",
+     "runs": 37.0,
+     "ms": 2.6779655
+    },
+    {
+     "name": "flash::flash_fwd_splitkv_kernel",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 0.8033255
+    },
+    {
+     "name": "flash::flash_fwd_splitkv_combine_kernel",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 0.244932
+    },
+    {
+     "name": "triton_red_fused_3",
+     "part": "other",
+     "runs": 35.0,
+     "ms": 0.104481
+    },
+    {
+     "name": "triton_red_fused_fused_add_rms_norm_2",
+     "part": "norm",
+     "runs": 36.0,
+     "ms": 0.066785
+    },
+    {
+     "name": "triton_red_fused_fused_add_rms_norm_0",
+     "part": "norm",
+     "runs": 36.0,
+     "ms": 0.059025
+    },
+    {
+     "name": "vllm::reshape_and_cache_flash_kernel",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 0.058625
+    },
+    {
+     "name": "at::native::cunn_SoftMaxForward",
+     "part": "sampling",
+     "runs": 1.0,
+     "ms": 0.0504005
+    },
+    {
+     "name": "triton_poi_fused_mul_silu_slice_1",
+     "part": "activation",
+     "runs": 36.0,
+     "ms": 0.040097
+    },
+    {
+     "name": "flashinfer::sampling::RadixTopKMaskLogitsKernel_MultiCTA",
+     "part": "sampling",
+     "runs": 1.0,
+     "ms": 0.019329
+    },
+    {
+     "name": "flashinfer::sampling::TopPSamplingFromProbKernel",
+     "part": "sampling",
+     "runs": 1.0,
+     "ms": 0.011841
+    }
+   ]
+  }
+ },
+ "c2_in128": {
+  "input": 128,
+  "output": 64,
+  "prompts": 4,
+  "concurrency": 2,
+  "client_tpot_ms": 18.170533746126154,
+  "client_ttft_ms": 44.23694987781346,
+  "decode": {
+   "wall_ms": 18.006789,
+   "kernel_ms": 17.9627875,
+   "parts": {
+    "linear": 16.907858,
+    "attention": 0.504537,
+    "other": 0.274965,
+    "norm": 0.1391375,
+    "sampling": 0.088914,
+    "activation": 0.045457
+   },
+   "kernels": [
+    {
+     "name": "cutlass::Kernel2",
+     "part": "linear",
+     "runs": 145.0,
+     "ms": 16.907747
+    },
+    {
+     "name": "flash::flash_fwd_splitkv_kernel",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 0.273059
+    },
+    {
+     "name": "flash::flash_fwd_splitkv_combine_kernel",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 0.170114
+    },
+    {
+     "name": "at::native::elementwise_kernel",
+     "part": "other",
+     "runs": 72.0,
+     "ms": 0.118498
+    },
+    {
+     "name": "triton_red_fused_3",
+     "part": "other",
+     "runs": 35.0,
+     "ms": 0.1104025
+    },
+    {
+     "name": "triton_red_fused_fused_add_rms_norm_2",
+     "part": "norm",
+     "runs": 36.0,
+     "ms": 0.074002
+    },
+    {
+     "name": "triton_red_fused_fused_add_rms_norm_0",
+     "part": "norm",
+     "runs": 36.0,
+     "ms": 0.062305
+    },
+    {
+     "name": "vllm::reshape_and_cache_flash_kernel",
+     "part": "attention",
+     "runs": 36.0,
+     "ms": 0.061536
+    },
+    {
+     "name": "at::native::cunn_SoftMaxForward",
+     "part": "sampling",
+     "runs": 1.0,
+     "ms": 0.0502725
+    },
+    {
+     "name": "triton_poi_fused_mul_silu_slice_1",
+     "part": "activation",
+     "runs": 36.0,
+     "ms": 0.045457
+    },
+    {
+     "name": "flashinfer::sampling::RadixTopKMaskLogitsKernel_MultiCTA",
+     "part": "sampling",
+     "runs": 1.0,
+     "ms": 0.019616
+    },
+    {
+     "name": "flashinfer::sampling::TopPSamplingFromProbKernel",
+     "part": "sampling",
+     "runs": 1.0,
+     "ms": 0.01936
+    }
+   ]
+  }
+ },
+ "c4_in2048": {
+  "input": 2048,
+  "output": 64,
+  "prompts": 8,
+  "concurrency": 4,
+  "client_tpot_ms": 22.4114275714826,
+  "client_ttft_ms": 641.1710360553116,
+  "decode": {
+   "wall_ms": 19.2693805,
+   "kernel_ms": 19.224979,
+   "parts": {
+    "linear": 16.939792,
+    "attention": 1.711515,
+    "other": 0.281061,
+    "norm": 0.137696,
+    "sampling": 0.099362,
+    "activation": 0.050113
+   },
+   "kernels": [
+    {
+     "name": "cutlass::Kernel2",
+     "part": "linear",
+     "runs": 145,
+     "ms": 16.939792
+    },
+    {
+     "name": "flash::flash_fwd_splitkv_kernel",
+     "part": "attention",
+     "runs": 36,
+     "ms": 1.522199
+    },
+    {
+     "name": "flash::flash_fwd_splitkv_combine_kernel",
+     "part": "attention",
+     "runs": 36,
+     "ms": 0.127617
+    },
+    {
+     "name": "at::native::elementwise_kernel",
+     "part": "other",
+     "runs": 72,
+     "ms": 0.122915
+    },
+    {
+     "name": "triton_red_fused_3",
+     "part": "other",
+     "runs": 35,
+     "ms": 0.110849
+    },
+    {
+     "name": "triton_red_fused_fused_add_rms_norm_2",
+     "part": "norm",
+     "runs": 36,
+     "ms": 0.073184
+    },
+    {
+     "name": "triton_red_fused_fused_add_rms_norm_0",
+     "part": "norm",
+     "runs": 36,
+     "ms": 0.061856
+    },
+    {
+     "name": "vllm::reshape_and_cache_flash_kernel",
+     "part": "attention",
+     "runs": 36,
+     "ms": 0.061408
+    },
+    {
+     "name": "at::native::cunn_SoftMaxForward",
+     "part": "sampling",
+     "runs": 1,
+     "ms": 0.050241
+    },
+    {
+     "name": "triton_poi_fused_mul_silu_slice_1",
+     "part": "activation",
+     "runs": 36,
+     "ms": 0.050113
+    },
+    {
+     "name": "flashinfer::sampling::TopPSamplingFromProbKernel",
+     "part": "sampling",
+     "runs": 1,
+     "ms": 0.029409
+    },
+    {
+     "name": "flashinfer::sampling::RadixTopKMaskLogitsKernel_MultiCTA",
+     "part": "sampling",
+     "runs": 1,
+     "ms": 0.019649
+    }
+   ]
+  }
+ },
+ "c16_in128": {
+  "input": 128,
+  "output": 64,
+  "prompts": 32,
+  "concurrency": 16,
+  "client_tpot_ms": 18.65896462861981,
+  "client_ttft_ms": 225.06021754816175,
+  "decode": {
+   "wall_ms": 18.513153,
+   "kernel_ms": 18.463006,
+   "parts": {
+    "linear": 17.04487,
+    "attention": 0.810253,
+    "other": 0.294182,
+    "norm": 0.140134,
+    "sampling": 0.106146,
+    "activation": 0.051937
+   },
+   "kernels": [
+    {
+     "name": "cutlass::Kernel2",
+     "part": "linear",
+     "runs": 145,
+     "ms": 17.044684
+    },
+    {
+     "name": "flash::flash_fwd_splitkv_kernel",
+     "part": "attention",
+     "runs": 36,
+     "ms": 0.640395
+    },
+    {
+     "name": "at::native::elementwise_kernel",
+     "part": "other",
+     "runs": 72,
+     "ms": 0.12592
+    },
+    {
+     "name": "triton_red_fused_3",
+     "part": "other",
+     "runs": 35,
+     "ms": 0.112002
+    },
+    {
+     "name": "flash::flash_fwd_splitkv_combine_kernel",
+     "part": "attention",
+     "runs": 36,
+     "ms": 0.106657
+    },
+    {
+     "name": "triton_red_fused_fused_add_rms_norm_2",
+     "part": "norm",
+     "runs": 36,
+     "ms": 0.074401
+    },
+    {
+     "name": "triton_red_fused_fused_add_rms_norm_0",
+     "part": "norm",
+     "runs": 36,
+     "ms": 0.063042
+    },
+    {
+     "name": "vllm::reshape_and_cache_flash_kernel",
+     "part": "attention",
+     "runs": 36,
+     "ms": 0.06288
+    },
+    {
+     "name": "triton_poi_fused_mul_silu_slice_1",
+     "part": "activation",
+     "runs": 36,
+     "ms": 0.051937
+    },
+    {
+     "name": "at::native::cunn_SoftMaxForward",
+     "part": "sampling",
+     "runs": 1,
+     "ms": 0.050433
+    },
+    {
+     "name": "flashinfer::sampling::TopPSamplingFromProbKernel",
+     "part": "sampling",
+     "runs": 1,
+     "ms": 0.031968
+    },
+    {
+     "name": "flashinfer::sampling::RadixTopKMaskLogitsKernel_MultiCTA",
+     "part": "sampling",
+     "runs": 1,
+     "ms": 0.023648
+    }
+   ]
+  }
+ },
+ "c64_in128": {
+  "input": 128,
+  "output": 64,
+  "prompts": 128,
+  "concurrency": 64,
+  "client_tpot_ms": 24.543339855939386,
+  "client_ttft_ms": 587.9074486438185,
+  "decode": {
+   "wall_ms": 21.485641,
+   "kernel_ms": 21.404363,
+   "parts": {
+    "linear": 18.284603,
+    "attention": 2.078499,
+    "other": 0.560686,
+    "sampling": 0.195779,
+    "norm": 0.158371,
+    "activation": 0.084129
+   },
+   "kernels": [
+    {
+     "name": "ampere_bf16_s1688gemm_bf16_64x64_sliced1x4_ldg8_f2f_tn",
+     "part": "linear",
+     "runs": 36,
+     "ms": 8.785128
+    },
+    {
+     "name": "ampere_bf16_s1688gemm_bf16_128x64_sliced1x2_ldg8_f2f_tn",
+     "part": "linear",
+     "runs": 36,
+     "ms": 4.389921
+    },
+    {
+     "name": "ampere_bf16_s16816gemm_bf16_64x64_sliced1x2_ldg8_f2f_stages_64x5_tn",
+     "part": "linear",
+     "runs": 72,
+     "ms": 3.674427
+    },
+    {
+     "name": "flash::flash_fwd_splitkv_kernel",
+     "part": "attention",
+     "runs": 36,
+     "ms": 2.013856
+    },
+    {
+     "name": "cutlass::Kernel2",
+     "part": "linear",
+     "runs": 1,
+     "ms": 1.43855
+    },
+    {
+     "name": "cublasLt::splitKreduce_kernel",
+     "part": "other",
+     "runs": 72,
+     "ms": 0.163456
+    },
+    {
+     "name": "at::native::elementwise_kernel",
+     "part": "other",
+     "runs": 72,
+     "ms": 0.143489
+    },
+    {
+     "name": "triton_red_fused_3",
+     "part": "other",
+     "runs": 35,
+     "ms": 0.115584
+    },
+    {
+     "name": "flashinfer::sampling::RadixTopKMaskLogitsKernel_MultiCTA",
+     "part": "sampling",
+     "runs": 1,
+     "ms": 0.089314
+    },
+    {
+     "name": "triton_poi_fused_mul_silu_slice_1",
+     "part": "activation",
+     "runs": 36,
+     "ms": 0.084129
+    },
+    {
+     "name": "triton_red_fused_fused_add_rms_norm_2",
+     "part": "norm",
+     "runs": 36,
+     "ms": 0.081089
+    },
+    {
+     "name": "triton_red_fused_fused_add_rms_norm_0",
+     "part": "norm",
+     "runs": 36,
+     "ms": 0.074145
+    }
+   ]
+  }
+ }
+}
